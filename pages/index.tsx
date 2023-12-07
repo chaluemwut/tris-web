@@ -2,6 +2,8 @@
 import loginLogo from '../public/static/images/login_logo.png'
 import Image from "next/image"
 import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useRouter } from 'next/navigation'
 
 const useDeviceSize = () => {
 
@@ -26,7 +28,26 @@ const useDeviceSize = () => {
 }
 
 export default function Index() {
-    const [width, height] = useDeviceSize();
+    const [width, height] = useDeviceSize()
+    const [username, setUserName] = useState()
+    const [password, setPassword] = useState()
+    const { push } = useRouter()
+
+    const handleUsername = (event: any) => {
+        setUserName(event.target.value)
+    }
+
+    const handlePassword = (event: any) => {
+        setPassword(event.target.value)
+    }
+
+    const onLogin = async () => {
+        const res = await axios.post(`${process.env.apiURL}/user-profile/asdfasdf`, { username: username, password: password })
+        if (res.data.auth == 1) {
+            push('/dashboard')
+        }
+    }
+
     return (<div className='login' style={{ height: height }}>
         <div style={{ width: '100%', position: 'relative' }}>
             <div className='login-bg-gradient' style={{
@@ -51,7 +72,7 @@ export default function Index() {
                                 <tr>
                                     <td><Image src={loginLogo} alt='login' /></td>
                                     <td>
-                                        <span style={{ color: '#003573', fontSize: '27px' }}>Key Performance <br/>
+                                        <span style={{ color: '#003573', fontSize: '27px' }}>Key Performance <br />
                                             Tracking Platform
                                         </span>
                                     </td>
@@ -62,18 +83,28 @@ export default function Index() {
                     </div>
                     <div>
                         <label className="form-label" style={{ color: '#828282' }}>User ID</label>
-                        <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Your User ID" />
+                        <input type="text"
+                            className="form-control"
+                            name="username"
+                            value={username}
+                            onChange={handleUsername}
+                            placeholder="Enter Your User ID" />
                     </div>
                     <div>
                         <label className="form-label" style={{ color: '#828282' }}>Password</label>
-                        <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter Your Password" />
+                        <input type="password"
+                            className="form-control"
+                            name="password"
+                            value={password}
+                            onChange={handlePassword}
+                            placeholder="Enter Your Password" />
                     </div>
                     <button className='btn' style={{
                         width: '100%',
                         marginTop: '30px',
                         backgroundColor: '#5A6ACE',
                         color: 'white',
-                    }}>Sign In</button>
+                    }} onClick={onLogin}>Sign In</button>
                 </div>
             </div>
         </div>
