@@ -79,7 +79,6 @@ export default function Index() {
                                 </tr>
                             </tbody>
                         </table>
-
                     </div>
                     <div>
                         <label className="form-label" style={{ color: '#828282' }}>User ID</label>

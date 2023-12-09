@@ -1,18 +1,54 @@
 body {
-    /* background-color: red; */
-    height: 100%;
-    margin: 0;
-    /* background-image: url("http://localhost:3000/static/images/login_bg.png"); */
+  /* background-color: red; */
+  height: 100%;
+  margin: 0;
+  /* background-image: url("http://localhost:3000/static/images/login_bg.png"); */
 }
 
 .login {
-    background-image: url(../public/static/images/login_bg.png);
+  background-image: url(../public/static/images/login_bg.png);
 
-    /* Full height */
-    height: 100%; 
+  /* Full height */
+  height: 100%;
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.nav-link[data-toggle].collapsed:after {
+  content: " ▾";
+}
+.nav-link[data-toggle]:not(.collapsed):after {
+  content: " ▴";
+}
+
+.local-wrap {
+  position: relative;
+}
+.local-wrap .fixed {
+  position: absolute;
+  left: 25px;
+  height: 15px;
+  width: 15px;
+}
+.local-wrap .fixed-circle {
+  position: absolute;
+  left: 24px;
+  top: -2px;
+  font-size: 18px;
+  color: white;
+}
+.local-wrap .port {
+  position: relative;
+}
+
+.primary-color {
+  color: '#5A6ACE';  
 }
