@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
+import { useCookies } from "react-cookie"
 
 const useDeviceSize = () => {
 
@@ -31,7 +32,9 @@ export default function Index() {
     const [width, height] = useDeviceSize()
     const [username, setUserName] = useState()
     const [password, setPassword] = useState()
+    const [error, setError] = useState('')
     const { push } = useRouter()
+    const [cookie, setCookie] = useCookies()
 
     const handleUsername = (event: any) => {
         setUserName(event.target.value)
@@ -44,7 +47,12 @@ export default function Index() {
     const onLogin = async () => {
         const res = await axios.post(`${process.env.apiURL}/user-profile/asdfasdf`, { username: username, password: password })
         if (res.data.auth == 1) {
+            setCookie('token', res.data.auth.token)
             push('/dashboard')
+        } else if (res.data.auth == -1) {
+            setError('ไม่มีผู้ใช้')
+        } else {
+            setError('รหัสผ่านไม่ถูกต้อง')
         }
     }
 
@@ -80,6 +88,9 @@ export default function Index() {
                             </tbody>
                         </table>
                     </div>
+                    {error != '' && <div>
+                        <span style={{ color: 'red' }}>{error}</span>
+                    </div>}
                     <div>
                         <label className="form-label" style={{ color: '#828282' }}>User ID</label>
                         <input type="text"

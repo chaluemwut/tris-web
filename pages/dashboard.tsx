@@ -9,9 +9,25 @@ import { DonutChartJS } from "../components/chartjs/DonutChart"
 import { LineChart } from "../components/chartjs/LineChart"
 import { LineSeriesChart } from "../components/chartjs/LineSeriesChart"
 import { StackWaterfallChart } from "../components/chartjs/StackWaterfallChart"
+import { useRouter } from "next/router"
 
+import { useCookies } from "react-cookie"
 
 export default function Dashboard() {
+    const [cookie, setCookie] = useCookies()
+    const { push } = useRouter()
+
+    useEffect(() => {
+        initData()
+    })
+
+    const initData = async () => {
+        const token = cookie.token
+        if (token == null) {
+            push('/')
+        }
+    }
+
     const [projectExpand, setProjectExpand] = useState(false)
     const [activeMenu, setActiveMenu] = useState('dashboard')
 
@@ -145,7 +161,7 @@ export default function Dashboard() {
                                         }}>
                                             <div>
                                                 <span style={{ color: '#4F4F4F', marginRight: '5px' }}>Year:</span>
-                                                <select style={{borderColor: '#5A6ACE', borderRadius: '5px'}}>
+                                                <select style={{ borderColor: '#5A6ACE', borderRadius: '5px' }}>
                                                     <option>2021</option>
                                                     <option>2022</option>
                                                 </select>
