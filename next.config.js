@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        // apiURL: 'http://localhost:10000'
+        apiURL: 'http://localhost:10000/api'
         // apiURL: 'https://tris-api.onrender.com'
-        apiURL: 'http://35.240.215.47/api'
+        // apiURL: 'http://35.240.215.47/api'
     }
 }
 

@@ -25,6 +25,7 @@ body {
 .nav-link[data-toggle].collapsed:after {
   content: " ▾";
 }
+
 .nav-link[data-toggle]:not(.collapsed):after {
   content: " ▴";
 }
@@ -32,12 +33,14 @@ body {
 .local-wrap {
   position: relative;
 }
+
 .local-wrap .fixed {
   position: absolute;
   left: 25px;
   height: 15px;
   width: 15px;
 }
+
 .local-wrap .fixed-circle {
   position: absolute;
   left: 24px;
@@ -45,10 +48,21 @@ body {
   font-size: 18px;
   color: white;
 }
+
 .local-wrap .port {
   position: relative;
 }
 
-.primary-color {
-  color: '#5A6ACE';  
+.primary-color-bg {
+  background-color: '#5A6ACE' !important;
+}
+
+.list-table-header {
+  color: white !important;
+  background-color: #5A6ACE !important;
+}
+
+.menu-active {
+  color: #5A6ACE !important;
+  background-color: #E6E9F8 !important;
 }
