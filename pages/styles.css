@@ -54,7 +54,8 @@ body {
 }
 
 .primary-color-bg {
-  background-color: '#5A6ACE' !important;
+  background-color: #5A6ACE !important;
+  color: white !important;
 }
 
 .list-table-header {

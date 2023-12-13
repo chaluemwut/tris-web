@@ -6,7 +6,7 @@ export default function ProjectDetail() {
         <div className="container-fluid">
             <div className="row">
                 <SideBar menuType={MenuActiveType.PROJECT} subMenuType={SubMenuActiveType.PROJECT_LIST} />
-                <div className="col-10">
+                <div className="col-10" style={{ backgroundColor: '#EEEFF3' }}>
                     <ProjectDetailComponent />
                 </div>
             </div>

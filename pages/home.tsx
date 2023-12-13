@@ -20,7 +20,7 @@ export default function Home() {
     const { push } = useRouter()
 
     useEffect(() => {
-        initData()
+        // initData()
     })
 
     const initData = async () => {
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="container-fluid">
             <div className="row">
                 <SideBar menuType={MenuActiveType.DASHBOARD} subMenuType={SubMenuActiveType.NONE} />
-                <div className="col-10">
+                <div className="col-10" style={{backgroundColor: '#EEEFF3'}}>
                     <Dashboard />
                 </div>
             </div>

@@ -6,7 +6,7 @@ export default function ProjectCreate() {
         <div className="container-fluid">
             <div className="row">
                 <SideBar menuType={MenuActiveType.PROJECT} subMenuType={SubMenuActiveType.PROJECT_CREATE} />
-                <div className="col-10">
+                <div className="col-10" style={{backgroundColor: '#EEEFF3'}}>
                     <ProjectCreateComponent />
                 </div>
             </div>

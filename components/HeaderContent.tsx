@@ -1,5 +1,5 @@
 export default function HeaderContent() {
-    return (<div style={{ backgroundColor: '#EEEFF3' }}>
+    return (<div>
         <div className="row" style={{ paddingTop: '10px', paddingBottom: '10px', paddingLeft: '30px' }}>
             <div className="col-2">
                 <div className="row justify-content-center align-items-center">

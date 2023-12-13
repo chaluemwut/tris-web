@@ -372,11 +372,11 @@ export default function Dashboard() {
         </div>
 
         <div className="row">
-            <ProjectHiLight headerLabel="Project Hi Light" />
+            <div><ProjectHiLight headerLabel="Project Hi Light" /></div>
         </div>
 
         <div className="row">
-            <ProjectHiLight headerLabel="Project Hi Light" />
+            <div><ProjectHiLight headerLabel="Project Hi Light" /></div>            
         </div>
     </div>)
 }
