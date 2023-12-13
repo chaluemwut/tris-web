@@ -67,3 +67,13 @@ body {
   color: #5A6ACE !important;
   background-color: #E6E9F8 !important;
 }
+
+.buttom-radius {
+  border: 1px solid #E0E0E0 !important;
+  border-radius: 60px !important;
+}
+
+.inner-bottom {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
