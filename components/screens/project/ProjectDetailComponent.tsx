@@ -33,13 +33,13 @@ export default function ProjectDetailComponent() {
                                     <h4 style={{ color: '#29305B' }}>โครงการบริหารจัดการโครงสร้างระบบราง ECC</h4>
                                 </div>
                                 <div style={{ marginTop: '10px' }}>
-                                    <span style={{ color: '#58585A' }}>รหัสโครงการ : XXXXXXXXXXX</span>
+                                    <span style={{ color: '#58585A' }}>รหัสโครงการ : RTR001</span>
                                 </div>
                                 <div style={{ marginTop: '10px' }}>
-                                    <span style={{ color: '#58585A' }}>หัวหน้าโครงการ : Mikael Olsen | ตำแหน่ง xxxxxxxxxxxxxxxxxxxx</span>
+                                    <span style={{ color: '#58585A' }}>หัวหน้าโครงการ : นายสมบัติ นามสมมฒิ | ตำแหน่ง รองศาสตราจารย์</span>
                                 </div>
                                 <div style={{ marginTop: '10px' }}>
-                                    <span style={{ color: '#58585A' }}>ผู้ประสานงาน : Declan Simpson | ตำแหน่ง xxxxxxxxxxxxxxxxxxxx</span>
+                                    <span style={{ color: '#58585A' }}>ผู้ประสานงาน : นางสาวปรางมณี ทดสอบ | ตำแหน่ง นักวิเคราะห์นโยบายและแผน</span>
                                 </div>
                             </div>
                         </div>
@@ -94,23 +94,28 @@ export default function ProjectDetailComponent() {
 
                 <div>
                     <div className="card" style={{ marginLeft: '30px', marginRight: '30px', marginTop: '40px' }}>
-                        <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
+                        <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px', marginBottom: '20px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <div>รายละเอียดโครงการ</div>
+                                <div>
+                                    <h3>รายละเอียดโครงการ</h3>
+                                </div>
                                 <div><i className="bi bi-pencil-square"></i></div>
                             </div>
                             <div>
                                 <p style={{ marginLeft: '10px', marginTop: '10px' }}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillumdolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    สทร. มุ่งหวังให้เกิดการวางรากฐานการปฏิบัติงานและการบริหารจัดการที่เป็นระบบ เชื่อมโยงกันทั้งในระดับโครงการ/แผนงาน สู่องค์กรผ่านการบูรณาการข้อมูลการปฏิบัติงานด้วยระบบเทคโนโลยี สารสนเทศ ดังนั้น เพื่อให้การบริหารงานของ สทร. สอดคล้องกับยุทธศาสตรชาติที่มีการนําเทคโนโลยีดิจิทัลมาประยุกต์ใช้โดยให้มีการติดตามและมีการประเมินผลที่เป็นระบบอย่างต่อเนื่อง และส่งผลให้การบริหารงานเป็นไปด้วยความโปร่งใสและเป็นธรรมจึงมีแนวคิดในการจัดทําโครงการพัฒนา ระบบเทคโนโลยีสารสนเทศเพื่อการติดตามและรายงานผลการปฏิบัติงานของ สทร.
                                 </p>
-                                <div>วัตถุประสงค์โครงการ</div>
-                                <p>
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
-                                    minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliqui.
-                                </p>
+                                <div>
+                                    <i className="bi bi-circle-fill" style={{ marginRight: '5px', fontSize: '10px' }}></i>
+                                    วัตถุประสงค์โครงการ
+                                </div>
+                                <div>1) ออกแบบและพัฒนาระบบเทคโนโลยีสารสนเทศเพื่อการติดตามและรายงานผลการปฏิบัติงานของสถาบันวิจัยและพัฒนาเทคโนโลยีระบบราง (องคการมหาชน) ตามแนวทางห่วงโซ่การดําเนินงาน
+                                    (Result Chain) สําหรับการประเมินความคุมค่าเพื่อพัฒนาองคการมหาชน ใหสามารถติดตามโครงการในมิติต่าง ๆ และตัวชี้วัดที่กําหนด
+                                </div>
+                                <div>2) เพื่อพัฒนาระบบสารสนเทศที่สามารถติดตาม ประเมินและรายงานผลการดําเนินงาน/ความกาวหนาของโครงการวิจัยและพัฒนาฯ</div>
+                                <div>3) เพื่ออํานวยความสะดวกในการจัดทําแผนงานโครงการ การติดตามความก้าวหน้าโครงการการรายงานผลการดําเนินงาน การประเมินผลงานตามตัวชี้วัด แผนงานโครงการ ตามประเภทงานต่าง ๆ</div>
+                                <div>4) เพื่อให้กรรมการและผูบริหารสถาบันฯ สามารถติดตามความกาวหนาของแผนงาน/โครงการตามตัวชี้วัด</div>
+                                <div>5) จัดทําคู่มือการใช้งานระบบติดตามและรายงานผลการปฏิบัติงานที่พัฒนาขึ้น โดยระบุขั้นตอนและวิธีการใช้งานระบบ สําหรับผู้ใช้งานในส่วนต่าง ๆ รวมทั้งการดูแลระบบสําหรับผูดูแลระบบ</div>
                             </div>
                         </div>
                     </div>
@@ -549,8 +554,8 @@ export default function ProjectDetailComponent() {
                                 </div>
                             </div>
                             <div>
-                                <img src={dummyP3.src} width={'100%'}/>
-                                <img src={dummyP4.src} width={'100%'}/>
+                                <img src={dummyP3.src} width={'100%'} />
+                                <img src={dummyP4.src} width={'100%'} />
                             </div>
                         </div>
                     </div>

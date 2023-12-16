@@ -6,6 +6,7 @@ import g1 from '../../../public/static/images/g1.png'
 import g2 from '../../../public/static/images/g2.png'
 import g3 from '../../../public/static/images/g3.svg'
 import g4 from '../../../public/static/images/g4.svg'
+import dummyP5 from '../../../public/static/images/dummyP5.png'
 import Image from "next/image"
 import { LineSeriesChart } from "../../chartjs/LineSeriesChart";
 import ProjectHiLight from "../../home/ProjectHiLight";
@@ -32,8 +33,14 @@ export default function Dashboard() {
         </div>
         <div className="row" style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
 
+            <div>
+                <div style={{ marginBottom: '20px' }}>
+                    <img src={dummyP5.src} width={'100%'} />
+                </div>
+            </div>
+
             <div className="col-6">
-                <div className="card" style={{ height: '100%' }}>
+                <div className="card" style={{ height: '100%', display: 'none' }}>
                     <div className="card-body">
                         <div className="row" style={{ height: '100%' }}>
                             <div className="col-8">
@@ -376,7 +383,7 @@ export default function Dashboard() {
         </div>
 
         <div className="row">
-            <div><ProjectHiLight headerLabel="Project Hi Light" /></div>            
+            <div><ProjectHiLight headerLabel="Project Hi Light" /></div>
         </div>
     </div>)
 }
