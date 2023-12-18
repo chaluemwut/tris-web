@@ -10,13 +10,17 @@ import { useRouter } from 'next/router'
 export enum MenuActiveType {
     NONE,
     DASHBOARD,
-    PROJECT
+    PROJECT,
+    KPI
 }
 
 export enum SubMenuActiveType {
     NONE,
     PROJECT_CREATE,
-    PROJECT_LIST
+    PROJECT_LIST,
+    KPIResultChain,
+    KPIoffice,
+    KPIstrategic
 }
 
 type MenuActive = {
@@ -31,6 +35,14 @@ export default function SideBar(menuActive: MenuActive) {
     const onClickProject = () => {
         if (projectExpand.menuType != MenuActiveType.PROJECT) {
             setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.PROJECT }))
+        } else {
+            setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.NONE }))
+        }
+    }
+
+    const onClickKIP = () => {
+        if (projectExpand.menuType != MenuActiveType.KPI) {
+            setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.KPI }))
         } else {
             setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.NONE }))
         }
@@ -134,15 +146,44 @@ export default function SideBar(menuActive: MenuActive) {
                 </div>
             </li>
             <li className="nav-item">
-                <a className="nav-link text-truncate" href="#">
-                    <i className="fa fa-bar-chart"></i>
-                    <span className="d-none d-sm-inline">
-                        <span style={{ marginRight: '5px' }}>
-                            <Image src={kpiIcon.src} alt="project icon" width={20} height={20} />
-                        </span>
+                <div style={{ cursor: 'pointer' }}
+                    className={projectExpand.menuType == MenuActiveType.KPI ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'}
+                    data-toggle="collapse" data-target="#submenu1">
+                    <i className="fa fa-table"></i>
+                    <span onClick={onClickKIP} className="d-none d-sm-inline">
+                        <span style={{ marginRight: '5px' }}><Image src={kpiIcon.src} alt="project icon" width={20} height={20} /> </span>
                         KPI
                     </span>
-                </a>
+                </div>
+                <div className={projectExpand.menuType == MenuActiveType.KPI ? 'expand' : 'collapse'}
+                    id="submenu1"
+                    aria-expanded="true">
+                    <ul className="flex-column pl-2 nav">
+                        <li className={projectExpand.subMenuType == SubMenuActiveType.KPIstrategic ? 'nav-item menu-active' : 'nav-item'}>
+                            <span className="nav-link py-0"
+                                onClick={() => {
+                                    push('/kpi/strategic')
+                                }}
+                                style={{ cursor: 'pointer' }}>ยุทธศาสตร์</span>
+                        </li>
+                        <li className={projectExpand.subMenuType == SubMenuActiveType.KPIoffice ? 'nav-item menu-active' : 'nav-item'}>
+                            <span
+                                className="nav-link"
+                                onClick={() => {
+                                    push('/kpi/office')
+                                }}
+                                style={{ cursor: 'pointer' }}>สำนักงาน ก.พ.ร.</span>
+                        </li>
+                        <li className={projectExpand.subMenuType == SubMenuActiveType.KPIResultChain ? 'nav-item menu-active' : 'nav-item'}>
+                            <span
+                                className="nav-link"
+                                onClick={() => {
+                                    push('/kpi/result-chain')
+                                }}
+                                style={{ cursor: 'pointer' }}>Result Chain (RC)</span>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li className="nav-item">
                 <a className="nav-link text-truncate" href="#">

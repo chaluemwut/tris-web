@@ -45,15 +45,16 @@ export default function Index() {
     }
 
     const onLogin = async () => {
-        const res = await axios.post(`${process.env.apiURL}/user-profile/asdfasdf`, { username: username, password: password })
-        if (res.data.auth == 1) {
-            setCookie('token', res.data.auth.token)
-            push('/home')
-        } else if (res.data.auth == -1) {
-            setError('ไม่มีผู้ใช้')
-        } else {
-            setError('รหัสผ่านไม่ถูกต้อง')
-        }
+        push('/home')
+        // const res = await axios.post(`${process.env.apiURL}/user-profile/asdfasdf`, { username: username, password: password })
+        // if (res.data.auth == 1) {
+        //     setCookie('token', res.data.auth.token)
+        //     push('/home')
+        // } else if (res.data.auth == -1) {
+        //     setError('ไม่มีผู้ใช้')
+        // } else {
+        //     setError('รหัสผ่านไม่ถูกต้อง')
+        // }
     }
 
     return (<div className='login' style={{ height: height }}>

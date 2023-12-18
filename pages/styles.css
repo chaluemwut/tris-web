@@ -103,3 +103,8 @@ body {
   margin-left: 20px;
   color: #4F4F4F;
 }
+
+.whith-table-td {
+  background-color: white !important;
+  /* color: white !important; */
+}
