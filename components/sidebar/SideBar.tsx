@@ -119,7 +119,7 @@ export default function SideBar(menuActive: MenuActive) {
                                 }}
                                 style={{ cursor: 'pointer' }}>โครงการที่อนุมัติทั้งหมด</span>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link  text-truncate collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1"><span>Customers</span></a>
                             <div className="collapse" id="submenu1sub1" aria-expanded="false">
                                 <ul className="flex-column nav pl-4">
@@ -141,7 +141,7 @@ export default function SideBar(menuActive: MenuActive) {
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </li>

@@ -108,3 +108,18 @@ body {
   background-color: white !important;
   /* color: white !important; */
 }
+
+.scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  /* background-color: #08c708; */
+  /* width: 300px; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.link-header-btn-header-project {
+  color: #29305B !important;
+  text-decoration: none !important;
+}

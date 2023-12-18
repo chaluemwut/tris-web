@@ -16,13 +16,15 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 import ListContent from "./detail/ListContent";
 import CardName from "./detail/CardName";
 import TwoColumnData from "./detail/TwoColumnData";
+import ProjectNameHeader from "./detail/ProjectNameHeader";
 
 export default function ProjectDetailComponent() {
     return (<div style={{ marginBottom: '20px' }}>
         <HeaderContent />
         <div>
             <div className="row">
-                <div>
+                <ProjectNameHeader/>
+                {/* <div>
                     <div className="card" style={{ marginLeft: '30px', marginRight: '30px', marginTop: '40px' }}>
                         <div style={{ width: '100%', height: '200px', position: 'relative' }}>
                             <Image src={projectHeaderImage.src} alt="Project header" layout='fill' objectFit='cover' />
@@ -90,7 +92,7 @@ export default function ProjectDetailComponent() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div>
                     <div className="card" style={{ marginLeft: '30px', marginRight: '30px', marginTop: '40px' }}>
