@@ -3,7 +3,7 @@ type HeaderData = {
     title: string
 }
 
-export default function HeaderDetail(headerData: HeaderData) {
+export default function MainEditHeader(headerData: HeaderData) {
     return (<div>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div>

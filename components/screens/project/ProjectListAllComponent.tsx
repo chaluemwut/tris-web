@@ -5,7 +5,7 @@ export default function ProjectListAllComponent() {
     const { push } = useRouter()
 
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent />
+        <HeaderContent title="โครงการ"/>
         <div>
             <div className="card" style={{ marginLeft: '10px', marginRight: '10px', marginTop: '20px' }}>
                 <div></div>

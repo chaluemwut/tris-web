@@ -1,4 +1,8 @@
-export default function HeaderContent() {
+type HeaderTitle = {
+    title: string
+}
+
+export default function HeaderContent(headerTitle: HeaderTitle) {
     return (<div>
         <div className="row" style={{ paddingTop: '10px', paddingBottom: '10px', paddingLeft: '30px' }}>
             <div className="col-2">
@@ -7,7 +11,7 @@ export default function HeaderContent() {
                         <i className="bi bi-list" style={{ fontSize: '25px', color: '#5A6ACE' }} />
                     </div>
                     <div className="col-8" style={{ textAlign: 'center', color: '#29305B' }}>
-                        หน้าหลักระบบ
+                        {headerTitle.title}
                     </div>
                 </div>
 

@@ -7,7 +7,7 @@ import card4 from "../../../public/static/images/card4.png";
 
 export default function ProjectCardComponent() {
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent />
+        <HeaderContent title="โครงการ"/>
         <div>
             <div className="row">
                 <ProjectNameHeader />

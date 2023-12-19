@@ -14,7 +14,7 @@ import { DonutChartJS } from "../../chartjs/DonutChart";
 
 export default function Dashboard() {
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent />
+        <HeaderContent title="หน้าหลัก"/>
         <div style={{ textAlign: 'right', paddingRight: '40px', marginTop: '20px' }}>
             <select style={{ color: 'white', backgroundColor: '#5A6ACE', borderRadius: '5px', height: '35px' }}>
                 <option>ดูทั้งหมด</option>

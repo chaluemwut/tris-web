@@ -170,7 +170,7 @@ export default function SideBar(menuActive: MenuActive) {
                             <span
                                 className="nav-link"
                                 onClick={() => {
-                                    push('/kpi/office')
+                                    push('/kpi/opdc')
                                 }}
                                 style={{ cursor: 'pointer' }}>สำนักงาน ก.พ.ร.</span>
                         </li>

@@ -8,7 +8,7 @@ import map from '../../../public/static/images/map.png';
 import pointGrid from '../../../public/static/images/point_grid.png';
 import peopleCircle from '../../../public/static/images/people_circle_icon.svg';
 import Image from "next/image";
-import HeaderDetail from "./detail/HeaderDetail";
+import MainEditHeader from "../../ui/MainEditHeader";
 import TopicHeader from "./detail/TopicHeader";
 import AccordingContent from "./detail/AccordingContent";
 import Table from "./detail/Table";
@@ -20,80 +20,10 @@ import ProjectNameHeader from "./detail/ProjectNameHeader";
 
 export default function ProjectDetailComponent() {
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent />
+        <HeaderContent title="โครงการ"/>
         <div>
             <div className="row">
                 <ProjectNameHeader/>
-                {/* <div>
-                    <div className="card" style={{ marginLeft: '30px', marginRight: '30px', marginTop: '40px' }}>
-                        <div style={{ width: '100%', height: '200px', position: 'relative' }}>
-                            <Image src={projectHeaderImage.src} alt="Project header" layout='fill' objectFit='cover' />
-                        </div>
-                        <div>
-                            <div style={{ marginTop: '10px', marginLeft: '20px', marginRight: '20px' }}>
-                                <div>
-                                    <h4 style={{ color: '#29305B' }}>โครงการบริหารจัดการโครงสร้างระบบราง ECC</h4>
-                                </div>
-                                <div style={{ marginTop: '10px' }}>
-                                    <span style={{ color: '#58585A' }}>รหัสโครงการ : RTR001</span>
-                                </div>
-                                <div style={{ marginTop: '10px' }}>
-                                    <span style={{ color: '#58585A' }}>หัวหน้าโครงการ : นายสมบัติ นามสมมฒิ | ตำแหน่ง รองศาสตราจารย์</span>
-                                </div>
-                                <div style={{ marginTop: '10px' }}>
-                                    <span style={{ color: '#58585A' }}>ผู้ประสานงาน : นางสาวปรางมณี ทดสอบ | ตำแหน่ง นักวิเคราะห์นโยบายและแผน</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div style={{ marginBlock: '20px' }}>
-                            <div>
-                                <div style={{
-                                    display: 'flex',
-                                    justifyContent: 'space-between',
-                                    alignItems: 'center',
-                                    marginLeft: '20px', marginRight: '20px'
-                                }}>
-                                    <div>
-                                        <button className="btn primary-color-bg" style={{ borderRadius: '60px' }}>
-                                            <div style={{ marginLeft: '10px', marginRight: '10px' }}>
-                                                New<i className="bi bi-caret-down-fill" style={{ marginLeft: '5px' }}></i>
-                                            </div>
-                                        </button>
-                                        <button className="btn" style={{
-                                            backgroundColor: '#5A6ACE',
-                                            borderRadius: '60px',
-                                            opacity: '65%',
-                                            marginLeft: '10px'
-                                        }}>
-                                            <div>
-                                                Invite People <i className="bi bi-person-plus-fill"></i>
-                                            </div>
-                                        </button>
-                                        <button className="btn buttom-radius" style={{ marginLeft: '10px' }}>
-                                            <div className="inner-bottom">Private</div>
-                                        </button>
-                                        <button className="btn buttom-radius" style={{ marginLeft: '10px' }}>
-                                            <div className="inner-bottom">Project Card</div>
-                                        </button>
-                                        <button className="btn buttom-radius" style={{ marginLeft: '10px' }}>
-                                            <div className="inner-bottom">Gantt Chart</div>
-                                        </button>
-                                        <button className="btn buttom-radius" style={{ marginLeft: '10px' }}>
-                                            <div className="inner-bottom">
-                                                <i className="bi bi-chat-left-text-fill" style={{ color: '#5A6ACE' }}></i>
-                                                <span style={{ marginLeft: '5px' }}>45 Comments</span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div>
-                                        <Image src={peopleCircle.src} width={100} height={100} alt="people" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-
                 <div>
                     <div className="card" style={{ marginLeft: '30px', marginRight: '30px', marginTop: '40px' }}>
                         <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px', marginBottom: '20px' }}>
@@ -126,7 +56,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="ความสอดคล้อง และความเชื่อมโยง" />
+                            <MainEditHeader title="ความสอดคล้อง และความเชื่อมโยง" />
 
                             <AccordingContent title="วัตถุประสงค์การจัดตั้งองค์กร" />
 
@@ -157,7 +87,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="กลุ่มเป้าหมาย" />
+                            <MainEditHeader title="กลุ่มเป้าหมาย" />
                             <p className="inner-content-p">
                                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
                                 inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
@@ -171,7 +101,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="หน่วยงานผู้รับผิดชอบ" />
+                            <MainEditHeader title="หน่วยงานผู้รับผิดชอบ" />
 
                             <div style={{ marginTop: '10px' }}>
                                 <div className="alert" style={{ backgroundColor: '#E6E9F8', color: '#29305B' }}>
@@ -203,7 +133,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="งบประมาณโครงการ" />
+                            <MainEditHeader title="งบประมาณโครงการ" />
                             <div>
                                 <p style={{ marginLeft: '10px', color: '#4F4F4F' }}>250,000,000  THB</p>
                             </div>
@@ -297,7 +227,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="ตัวชี้วัดรายโครงการ" />
+                            <MainEditHeader title="ตัวชี้วัดรายโครงการ" />
 
                             <div>
                                 <div>
@@ -320,7 +250,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="กิจกรรมสำคัญในโครงการ (Activities)" />
+                            <MainEditHeader title="กิจกรรมสำคัญในโครงการ (Activities)" />
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '10px' }}>
                             <Table titleHeader={['แผนดำเนินงาน', 'น้ำหนัก', 'ผลการดำเนินงาน', 'ร้อยละของผลการดำเนินงาน เทียบกับแผนการดำเนินงาน', 'หมายเหตุ', 'เอกสารที่เกี่ยวข้อง']} />
@@ -331,7 +261,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="ผลการเบิกจ่าย" />
+                            <MainEditHeader title="ผลการเบิกจ่าย" />
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '10px' }}>
                             <Table titleHeader={['วงเงินที่ได้รับการอนุมัติ', 'ผลการเบิกจ่าย', 'ร้อยละผลการเบิกจ่ายต่อ วงเงินที่ได้รับการอนุมัติ', 'หมายเหตุ']} />
@@ -342,7 +272,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="สถานะโครงการ" />
+                            <MainEditHeader title="สถานะโครงการ" />
 
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px' }}>
                                 <div>
@@ -373,7 +303,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="ความเสียงปัญหาและอุปสรรค" />
+                            <MainEditHeader title="ความเสียงปัญหาและอุปสรรค" />
                         </div>
                         <div style={{ marginLeft: '20px' }}>
                             <ListContent data={[
@@ -390,7 +320,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="ข้อสังเกต และข้อเสนอแนะ" />
+                            <MainEditHeader title="ข้อสังเกต และข้อเสนอแนะ" />
                         </div>
                         <div style={{ marginLeft: '20px' }}>
                             <ListContent data={[
@@ -407,7 +337,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="องค์ความรู้จากการดำเนินโครงการ" />
+                            <MainEditHeader title="องค์ความรู้จากการดำเนินโครงการ" />
                         </div>
                         <div style={{ marginLeft: '20px' }}>
                             <ListContent data={[
@@ -423,7 +353,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="ผู้รับผิดชอบโครงการจาก สทร." />
+                            <MainEditHeader title="ผู้รับผิดชอบโครงการจาก สทร." />
                         </div>
                         <div className="row" style={{ marginBottom: '10px' }}>
                             <div className="col-6">
@@ -443,7 +373,7 @@ export default function ProjectDetailComponent() {
                 <div>
                     <div className="card detail-card-content">
                         <div className="inner-detail-card-content">
-                            <HeaderDetail title="รายละเอียดตัวชี้วัด" />
+                            <MainEditHeader title="รายละเอียดตัวชี้วัด" />
                         </div>
                         <div>
                             <div className="alert" style={{

@@ -1,5 +1,5 @@
-import StrategicImage from "../../components/screens/dummy/StrategicImage";
-import SideBar, { MenuActiveType, SubMenuActiveType } from "../../components/sidebar/SideBar";
+import StrategicIndexComponent from "../../../components/screens/kpi/strategic/StrategicIndexComponent";
+import SideBar, { MenuActiveType, SubMenuActiveType } from "../../../components/sidebar/SideBar";
 
 export default function Strategic() {
     return (<div>
@@ -7,7 +7,7 @@ export default function Strategic() {
             <div className="row">
                 <SideBar menuType={MenuActiveType.KPI} subMenuType={SubMenuActiveType.KPIstrategic} />
                 <div className="col-10" style={{ backgroundColor: '#EEEFF3' }}>
-                    <StrategicImage />
+                    <StrategicIndexComponent />
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import getKIPData from "../../dummydata/KPIData";
 
 export default function KPIOfficeComponent() {
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent />
+        <HeaderContent title="KPI"/>
         <div>
             <div style={{ marginLeft: '20px', marginRight: '20px' }}>
                 <div>
