@@ -1,5 +1,5 @@
-import ResultChainImage from "../../components/screens/dummy/ResultChainImage";
-import SideBar, { MenuActiveType, SubMenuActiveType } from "../../components/sidebar/SideBar";
+import ResultChainIndexComponent from "../../../components/screens/kpi/resultchain/ResultChainImage";
+import SideBar, { MenuActiveType, SubMenuActiveType } from "../../../components/sidebar/SideBar";
 
 export default function ResultChain() {
     return (<div>
@@ -7,7 +7,7 @@ export default function ResultChain() {
             <div className="row">
                 <SideBar menuType={MenuActiveType.KPI} subMenuType={SubMenuActiveType.KPIResultChain} />
                 <div className="col-10" style={{ backgroundColor: '#EEEFF3' }}>
-                    <ResultChainImage />
+                    <ResultChainIndexComponent />
                 </div>
             </div>
         </div>
