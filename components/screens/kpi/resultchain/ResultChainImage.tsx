@@ -1,29 +1,46 @@
 import HeaderContent from "../../../HeaderContent";
+import { DonutPercentIconChart } from "../../../chartjs/DonutPercentIconChart";
+
 
 export default function ResultChainIndexComponent() {
-    const displayType1 = () => {
+    const displayType1 = (d1: { txt1: string, txt2: string }, d2: { txt1: string, txt2: string }) => {
         return <div>
-            <div className="row">
+            <div className="row" style={{ marginTop: '10px', marginBottom: '10px' }}>
                 <div className="col">
-                    <div className="card" style={{borderColor: '#40B2B7'}}>
-                        <div className="card-header" style={{backgroundColor: '#40B2B7', color: 'white'}}>
-                            ได้รับการนําไปตามกลไก ข้อ 1 หรือ 2 หรือ 3 อย่างน้อยหนึ่งกลไก
+                    <div className="card" style={{ borderColor: '#40B2B7' }}>
+                        <div className="card-header" style={{ backgroundColor: '#40B2B7', color: 'white', textAlign: 'center' }}>
+                            {d1.txt1}
                         </div>
-                        <div className="card-body">
-                            <span>abcd</span>
+                        <div style={{ textAlign: 'center', marginTop: '5px', marginBottom: '5px' }}>
+                            <span style={{ color: '#58585A' }}>{d1.txt2}</span>
                         </div>
                     </div>
                 </div>
                 <div className="col">
-                    <div className="card">
-                        <div className="card-header" style={{backgroundColor : '#505EB5'}}>
-                            ได้รับการนําไปใช้ตามข้อ 1 และ 2 และ 3ทั้งหมด
+                    <div className="card" style={{ borderColor: '#505EB5' }}>
+                        <div className="card-header" style={{ backgroundColor: '#505EB5', color: 'white', textAlign: 'center' }}>
+                            {d1.txt1}
                         </div>
-                        <div className="card-body">
-                            <span>abcd</span>
+                        <div style={{ textAlign: 'center', marginTop: '5px', marginBottom: '5px' }}>
+                            <span style={{ color: '#58585A' }}>{d1.txt2}</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    }
+
+    const donutIcon = () => {
+        return <div>
+            <div className="row" style={{ marginTop: '10px', marginBottom: '10px' }}>
+                <div className="col">
+                   <div style={{width: '70px', height: '70px'}}>
+                    <DonutPercentIconChart color="rgb(90, 106, 206)" dataPercent={50}/>
+                   </div>
+                </div>
+                {/* <div className="col">
+                    <DonutPercentIconChart />
+                </div> */}
             </div>
         </div>
     }
@@ -67,18 +84,21 @@ export default function ResultChainIndexComponent() {
                 </div>
 
                 <div>
-                    <div>
-
+                    <div className="card">
                         {[
                             {
                                 title: '3.ยุทธศาสตร์ด้านเทคโนโลยีระบบรางของสถาบันได้รับการนําไปใช้ในการกําหนดแผนและจัดสรรงบประมาณด้านเทคโนโลยีระบบรางของประเทศ',
-                                fn: displayType1()
+                                fn: displayType1({ txt1: 'ได้รับการนําไปตามกลไก ข้อ 1 หรือ 2 หรือ 3 อย่างน้อยหนึ่งกลไก', txt2: 'เป้าหมาย 3 ปี (>= 1 กลไก)' }, { txt1: 'aa', txt2: 'เป้าหมาย 5 ปี (= 3 กลไก)' })
                             },
                             {
                                 title: '4.จํานวนชิ้นส่วนและอุปกรณ์จากผลงานสทร. ที่สามารถผลิตภายในประเทศ(local content) และใช้งานจริงได้',
-                                fn: displayType1()
+                                fn: displayType1({ txt1: '2 รายการ', txt2: 'เป้าหมาย 3 ปี (>= 1 รายการ)' }, { txt1: '5 รายการ', txt2: 'เป้าหมาย 5 ปี (>= 3 รายการ)' })
+                            },
+                            {
+                                title: '5. ร้อยละความพึงพอใจของผู้ประกอบการขนส่งทางราง ระบบรางในเรื่องการวิจัยเทคโนโลยีระบบราง',
+                                fn: donutIcon()
                             }
-                        ].map((e) => <div className="row">
+                        ].map((e) => <div className="row" style={{ marginLeft: '10px', marginRight: '10px' }}>
                             <div className="col-7">{e.title}</div>
                             <div className="col-5">{e.fn}</div>
                         </div>
