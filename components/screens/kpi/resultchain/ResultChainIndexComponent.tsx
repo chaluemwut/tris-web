@@ -1,5 +1,6 @@
 import HeaderContent from "../../../HeaderContent";
 import { DonutPercentIconChart } from "../../../chartjs/DonutPercentIconChart";
+import { OverlabBarChart } from "../../../chartjs/OverlabBarChart";
 
 
 export default function ResultChainIndexComponent() {
@@ -90,7 +91,13 @@ export default function ResultChainIndexComponent() {
 
                 <div>
                     <div className="row" style={{ marginBottom: '10px', marginTop: '10px' }}>
-                        <div className="col-8"></div>
+                        <div className="col-8">
+                            <div>
+                                <div className="card">
+                                    <OverlabBarChart />
+                                </div>
+                            </div>
+                        </div>
                         <div className="col-4">
                             <div className="card">
                                 <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '10px' }}>

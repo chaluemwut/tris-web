@@ -5,24 +5,62 @@ import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['January', 'February', 'March', 'April', 'May'];
+
+export const options = {
+  elements: {
+    bar: {
+      borderWidth: 0,
+    },
+  },
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false
+    }
+  },
+  // plugins: {
+  //   legend: {
+  //     position: 'right' as const,
+  //   },
+  //   title: {
+  //     display: true,
+  //     text: 'Chart.js Horizontal Bar Chart',
+  //   },
+  // },
+  scales: {
+    x: {
+      display: false,
+      grid: {
+        display: false
+      }
+    },
+    y: {
+      stacked: true,
+      display: false,
+      grid: {
+        display: false
+      }
+    }
+  }
+};
 
 export const data = {
   labels,
   datasets: [
     {
       label: 'Dataset 1',
-      data: [65, 59, 80, 81, 56, 55, 40],
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      data: [160, 140, 100, 60, 60],
+      backgroundColor: '#FFD34B',
     },
     {
       label: 'Dataset 2',
-      data: [45, 79, 10, 41, 16, 85, 20],
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      data: [200, 160, 150, 100, 60],
+      backgroundColor: '#F4694C',
     },
   ],
 };
 
 export function OverlabBarChart() {
-  return <Bar data={data} />;
+  return <Bar options={options} data={data} />;
 }
