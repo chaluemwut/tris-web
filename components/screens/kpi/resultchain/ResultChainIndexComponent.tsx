@@ -89,12 +89,34 @@ export default function ResultChainIndexComponent() {
                 </div>
 
                 <div>
-                    <div className="row">
+                    <div className="row" style={{ marginBottom: '10px', marginTop: '10px' }}>
                         <div className="col-8"></div>
                         <div className="col-4">
                             <div className="card">
-                                <div>
-                                    มีผู้ประกอบการผู้ผลิตชิ้นส่วนสําคัญในระบบรางภายในประเทศที่ได้มาตรฐาน
+                                <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '10px' }}>
+                                    <div>
+                                        2. มีผู้ประกอบการผู้ผลิตชิ้นส่วนสําคัญในระบบรางภายในประเทศที่ได้มาตรฐาน
+                                    </div>
+                                    <div className="card" style={{ borderColor: '#40B2B7', marginTop: '10px' }}>
+                                        <div className="card-header" style={{ backgroundColor: '#40B2B7', color: 'white', textAlign: 'center' }}>
+                                            1
+                                        </div>
+                                        <div style={{ textAlign: 'center', marginTop: '5px', marginBottom: '5px' }}>
+                                            <span style={{ color: '#58585A' }}>
+                                                เป้าหมาย 3 ปี (0 ราย/โรงงาน)
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="card" style={{ borderColor: '#505EB5', marginTop: '10px', marginBottom: '10px' }}>
+                                        <div className="card-header" style={{ backgroundColor: '#505EB5', color: 'white', textAlign: 'center' }}>
+                                            2
+                                        </div>
+                                        <div style={{ textAlign: 'center', marginTop: '5px', marginBottom: '5px' }}>
+                                            <span style={{ color: '#58585A' }}>
+                                                เป้าหมาย 5 ปี (1 ราย/โรงงาน)
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +125,7 @@ export default function ResultChainIndexComponent() {
 
                 <div>
                     <div className="card" style={{ marginBottom: '40px' }}>
-                        <div style={{marginTop: '40px', marginBottom: '40px'}}>
+                        <div style={{ marginTop: '40px', marginBottom: '40px' }}>
                             {[
                                 {
                                     title: '3.ยุทธศาสตร์ด้านเทคโนโลยีระบบรางของสถาบันได้รับการนําไปใช้ในการกําหนดแผนและจัดสรรงบประมาณด้านเทคโนโลยีระบบรางของประเทศ',

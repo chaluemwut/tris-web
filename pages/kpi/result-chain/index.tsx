@@ -1,4 +1,4 @@
-import ResultChainIndexComponent from "../../../components/screens/kpi/resultchain/ResultChainImage";
+import ResultChainIndexComponent from "../../../components/screens/kpi/resultchain/ResultChainIndexComponent";
 import SideBar, { MenuActiveType, SubMenuActiveType } from "../../../components/sidebar/SideBar";
 
 export default function ResultChain() {
