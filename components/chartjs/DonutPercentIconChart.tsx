@@ -27,7 +27,7 @@ export function DonutPercentIconChart(donutData: DonutData) {
   const data = {
     datasets: [
       {
-        data: [50, 50],
+        data: [donutData.dataPercent, 100-donutData.dataPercent],
         borderRadius: 2,
         backgroundColor: [donutData.color, 'rgb(90, 106, 206, 0.15)'],
       }
