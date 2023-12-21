@@ -1,9 +1,12 @@
+import { useRouter } from "next/router";
 import HeaderContent from "../../../HeaderContent";
 import { DonutPercentIconChart } from "../../../chartjs/DonutPercentIconChart";
 import { OverlabBarChart } from "../../../chartjs/OverlabBarChart";
 
 
 export default function ResultChainIndexComponent() {
+    const { push } = useRouter()
+    
     const displayType1 = (d1: { txt1: string, txt2: string }, d2: { txt1: string, txt2: string }) => {
         return <div>
             <div className="row" style={{ marginTop: '10px', marginBottom: '10px' }}>
@@ -82,7 +85,12 @@ export default function ResultChainIndexComponent() {
                             <span style={{ color: '#29305B' }}>ตัวชี้วัดหลักของ สทร. สําหรับประเมินความคุ้มค่าตาม Result Chain</span>
                         </div>
                         <div>
-                            <button className="btn" style={{ backgroundColor: '#5A6ACE', color: 'white', borderRadius: '20px' }}>
+                            <button className="btn" 
+                            style={{ backgroundColor: '#5A6ACE', color: 'white', borderRadius: '20px' }}
+                            onClick={()=>{
+                                push('/kpi/result-chain/rc-result')
+                            }}
+                            >
                                 รายละเอียดผล RC
                             </button>
                         </div>
@@ -94,12 +102,38 @@ export default function ResultChainIndexComponent() {
                         <div className="col-8">
                             <div>
                                 <div className="card">
-                                    <OverlabBarChart />
+                                    <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '10px', marginBottom: '20px' }}>
+                                        <div>
+                                            <span style={{ color: '#29305B' }}>
+                                                1. มูลค่าเพิ่มทางเศรษฐกิจที่เกิดจากการดําเนินงานของ สทร.
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                <div>
+                                                    <span>ปีงบประมาณ</span>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <i className="bi bi-circle-fill" style={{ marginRight: '5px', color: '#FFD34B' }}></i>
+                                                        ผลดำเนินงาน
+                                                    </div>
+                                                    <div>
+                                                        <i className="bi bi-circle-fill" style={{ marginRight: '5px', color: '#F4694C' }}></i>
+                                                        ผลดำเนินงานสะสม
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style={{ marginLeft: '10px', marginRight: '10px' }}>
+                                            <OverlabBarChart />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-4">
-                            <div className="card">
+                            <div className="card" style={{ height: '100%' }}>
                                 <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '10px' }}>
                                     <div>
                                         2. มีผู้ประกอบการผู้ผลิตชิ้นส่วนสําคัญในระบบรางภายในประเทศที่ได้มาตรฐาน

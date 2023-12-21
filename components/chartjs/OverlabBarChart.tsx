@@ -5,9 +5,10 @@ import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const labels = ['January', 'February', 'March', 'April', 'May'];
+const labels = ['ปี 2571', 'ปี 2570', 'ปี 2569', 'ปี 2568', 'ปี 2567'];
 
 export const options = {
+  indexAxis: 'y',
   elements: {
     bar: {
       borderWidth: 0,
@@ -30,14 +31,14 @@ export const options = {
   // },
   scales: {
     x: {
-      display: false,
+      display: true,
       grid: {
         display: false
       }
     },
     y: {
       stacked: true,
-      display: false,
+      display: true,
       grid: {
         display: false
       }
@@ -49,12 +50,12 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
+      // label: 'Dataset 1',
       data: [160, 140, 100, 60, 60],
       backgroundColor: '#FFD34B',
     },
     {
-      label: 'Dataset 2',
+      // label: 'Dataset 2',
       data: [200, 160, 150, 100, 60],
       backgroundColor: '#F4694C',
     },
