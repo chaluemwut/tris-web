@@ -1,5 +1,5 @@
-import StrategicIndexComponent from "../../../components/screens/kpi/strategic/StrategicIndexComponent";
-import SideBar, { MenuActiveType, SubMenuActiveType } from "../../../components/sidebar/SideBar";
+
+import SideBar, { MenuActiveType, SubMenuActiveType } from "../../components/sidebar/SideBar";
 
 export default function TeamPage() {
     return (<div>
@@ -7,7 +7,7 @@ export default function TeamPage() {
             <div className="row">
                 <SideBar menuType={MenuActiveType.TEAMPAGE} subMenuType={SubMenuActiveType.NONE} />
                 <div className="col-10" style={{ backgroundColor: '#EEEFF3' }}>
-                    <StrategicIndexComponent />
+                   
                 </div>
             </div>
         </div>

@@ -52,6 +52,7 @@ export default function SideBar(menuActive: MenuActive) {
         }
     }
 
+    
     return (<div className="col-2 collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar">
         <ul className="nav flex-column flex-nowrap overflow-hidden">
             <li>
@@ -78,11 +79,12 @@ export default function SideBar(menuActive: MenuActive) {
                 <div className={projectExpand.menuType == MenuActiveType.DASHBOARD ? 'nav-link text-truncate menu-active' : 'nav-link text-truncate'} style={{ cursor: 'pointer' }}>
                     <i className="fa fa-home"></i>
                     <span onClick={() => {
-                        if (projectExpand.subMenuType == SubMenuActiveType.NONE) {
-                            setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.DASHBOARD }))
-                        } else {
-                            push('/home')
-                        }
+                        // if (projectExpand.subMenuType == SubMenuActiveType.NONE) {
+                        //     setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.DASHBOARD }))
+                        // } else {
+                        //     push('/home')
+                        // }
+                        push('/home')
                     }} className="d-none d-sm-inline">
                         <span style={{ marginRight: '5px' }}>
                             <Image src={dashboardIcon.src} alt="dashboard icon" width={20} height={20} />
