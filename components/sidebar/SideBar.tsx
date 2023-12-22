@@ -11,7 +11,11 @@ export enum MenuActiveType {
     NONE,
     DASHBOARD,
     PROJECT,
-    KPI
+    KPI,
+    TEAMPAGE,
+    ACTIVITY,
+    ADMIN,
+    SETTING
 }
 
 export enum SubMenuActiveType {
@@ -186,7 +190,9 @@ export default function SideBar(menuActive: MenuActive) {
                 </div>
             </li>
             <li className="nav-item">
-                <a className="nav-link text-truncate" href="#">
+                <ul className={projectExpand.menuType == MenuActiveType.TEAMPAGE ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'} onClick={() => {
+                    push('/teampage')
+                }}>
                     <i className="fa fa-download"></i>
                     <span className="d-none d-sm-inline">
                         <span style={{ marginRight: '5px' }}>
@@ -194,7 +200,7 @@ export default function SideBar(menuActive: MenuActive) {
                         </span>
                         Team
                     </span>
-                </a>
+                </ul>
             </li>
         </ul>
     </div>)
