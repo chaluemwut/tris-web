@@ -191,7 +191,7 @@ export default function SideBar(menuActive: MenuActive) {
                     </ul>
                 </div>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" style={{cursor: 'pointer'}}>
                 <ul className={projectExpand.menuType == MenuActiveType.TEAMPAGE ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'} onClick={() => {
                     push('/teampage')
                 }}>
