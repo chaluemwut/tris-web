@@ -3,6 +3,7 @@ import projectIcon from '../../public/static/images/project_left_icon.svg'
 import dashboardIcon from '../../public/static/images/dashboard_left_icon.svg'
 import kpiIcon from '../../public/static/images/vector_left_icon.svg'
 import teamIcon from '../../public/static/images/team_left_icon.svg'
+import activityIcon from '../../public/static/images/activity_left_icon.svg'
 import Image from "next/image"
 import { useState } from 'react'
 import { useRouter } from 'next/router'
@@ -204,6 +205,19 @@ export default function SideBar(menuActive: MenuActive) {
                     </span>
                 </ul>
             </li>
+            <li className="nav-item" style={{cursor: 'pointer'}}>
+                <ul className={projectExpand.menuType == MenuActiveType.ACTIVITY ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'} onClick={() => {
+                    push('/activity')
+                }}>
+                    <i className="fa fa-download"></i>
+                    <span className="d-none d-sm-inline">
+                        <span style={{ marginRight: '5px' }}>
+                            <Image src={activityIcon.src} alt="project icon" width={20} height={20} />
+                        </span>
+                        Activity
+                    </span>
+                </ul>
+            </li>            
         </ul>
     </div>)
 }
