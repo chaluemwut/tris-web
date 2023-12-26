@@ -1,18 +1,33 @@
 import HeaderContent from "../../../HeaderContent";
 
-export default function RCResultComponent() {
+type ResultParam = {
+    isAdminPage: boolean
+}
+
+export default function RCResultComponent(resultParam: ResultParam) {
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent title="KPI" />
+        {!resultParam.isAdminPage && <HeaderContent title="KPI" />}
+        {resultParam.isAdminPage && <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginLeft: '20px', marginRight: '20px', paddingTop: '20px', paddingBottom: '20px' }}>
+                <div style={{ color: '#29305B' }}>ตัวชี้วัดหลักของ สทร. สําหรับประเมินความคุ้มค่าตาม Result Chain</div>
+                <div>
+                    <button className="btn" style={{ backgroundColor: '#5A6ACE', color: 'white' }}>+ เพิ่มปี (เป้าหมาย)</button>
+                    <button className="btn" style={{ backgroundColor: '#F4694C', color: 'white', marginLeft: '10px' }}>
+                        <i className="bi bi-pencil-square"></i>
+                        Edit</button>
+                </div>
+            </div>
+        </div>}
         <div>
             <div style={{ marginLeft: '20px', marginRight: '20px' }}>
                 <div className="card">
                     <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px', marginBottom: '20px' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        {!resultParam.isAdminPage && <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <div>ตัวชี้วัดหลักของ สทร. สําหรับประเมินความคุ้มค่าตาม Result Chain</div>
                             <div>
                                 <button className="btn" style={{ backgroundColor: '#BDBDBD', color: 'white' }}>Edit</button>
                             </div>
-                        </div>
+                        </div>}
                         <div>
                             <table className="table">
                                 <thead>
@@ -262,11 +277,11 @@ export default function RCResultComponent() {
                             </table>
                         </div>
 
-                        <div style={{marginTop: '10px'}}>
+                        <div style={{ marginTop: '10px' }}>
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <td colSpan={3} style={{ backgroundColor: '#E6E9F8' }}>ผลกระทบทางตรง (Impact)</td>
+                                        <td colSpan={3} style={{ backgroundColor: '#E6E9F8' }}>ผลลัพธ์ (Outcome)</td>
                                         <td style={{ backgroundColor: '#939AB2', color: 'white' }}>2566</td>
                                         <td style={{ backgroundColor: '#939AB2', color: 'white' }}>2567</td>
                                         <td style={{ backgroundColor: '#939AB2', color: 'white' }}>2568</td>

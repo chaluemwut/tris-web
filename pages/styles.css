@@ -123,3 +123,15 @@ body {
   color: #29305B !important;
   text-decoration: none !important;
 }
+
+.nav-active-tab {
+  color: white !important;
+  background-color: #5A6ACE !important;
+  cursor: pointer;
+}
+
+.nav-non-active-tab {
+  color: #5A6ACE !important;
+  background-color: white !important;
+  cursor: pointer;
+}

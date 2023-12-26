@@ -4,6 +4,7 @@ import dashboardIcon from '../../public/static/images/dashboard_left_icon.svg'
 import kpiIcon from '../../public/static/images/vector_left_icon.svg'
 import teamIcon from '../../public/static/images/team_left_icon.svg'
 import activityIcon from '../../public/static/images/activity_left_icon.svg'
+import adminIcon from '../../public/static/images/admin_left_icon.svg'
 import Image from "next/image"
 import { useState } from 'react'
 import { useRouter } from 'next/router'
@@ -25,7 +26,8 @@ export enum SubMenuActiveType {
     PROJECT_LIST,
     KPIResultChain,
     KPIoffice,
-    KPIstrategic
+    KPIstrategic,
+    ADMIN_KPI
 }
 
 type MenuActive = {
@@ -53,7 +55,15 @@ export default function SideBar(menuActive: MenuActive) {
         }
     }
 
-    
+    const onClickAdmin = () => {
+        if (projectExpand.menuType != MenuActiveType.ADMIN) {
+            setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.ADMIN }))
+        } else {
+            setProjectExpand(prevState => ({ ...prevState, menuType: MenuActiveType.NONE }))
+        }
+    }
+
+
     return (<div className="col-2 collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100" id="sidebar">
         <ul className="nav flex-column flex-nowrap overflow-hidden">
             <li>
@@ -97,7 +107,6 @@ export default function SideBar(menuActive: MenuActive) {
             <li className="nav-item">
                 <div style={{ cursor: 'pointer' }}
                     className={projectExpand.menuType == MenuActiveType.PROJECT ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'}
-                    // className="nav-link collapsed text-truncate"
                     data-toggle="collapse" data-target="#submenu1">
                     <i className="fa fa-table"></i>
                     <span onClick={() => {
@@ -126,29 +135,6 @@ export default function SideBar(menuActive: MenuActive) {
                                 }}
                                 style={{ cursor: 'pointer' }}>โครงการที่อนุมัติทั้งหมด</span>
                         </li>
-                        {/* <li className="nav-item">
-                            <a className="nav-link  text-truncate collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1"><span>Customers</span></a>
-                            <div className="collapse" id="submenu1sub1" aria-expanded="false">
-                                <ul className="flex-column nav pl-4">
-                                    <li className="nav-item">
-                                        <a className="nav-link p-1 text-truncate" href="#">
-                                            <i className="fa fa-fw fa-clock-o"></i> Daily </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link p-1 text-truncate" href="#">
-                                            <i className="fa fa-fw fa-dashboard"></i> Dashboard </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link p-1 text-truncate" href="#">
-                                            <i className="fa fa-fw fa-bar-chart"></i> Charts </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link p-1 text-truncate" href="#">
-                                            <i className="fa fa-fw fa-compass"></i> Areas </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li> */}
                     </ul>
                 </div>
             </li>
@@ -192,7 +178,7 @@ export default function SideBar(menuActive: MenuActive) {
                     </ul>
                 </div>
             </li>
-            <li className="nav-item" style={{cursor: 'pointer'}}>
+            <li className="nav-item" style={{ cursor: 'pointer' }}>
                 <ul className={projectExpand.menuType == MenuActiveType.TEAMPAGE ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'} onClick={() => {
                     push('/teampage')
                 }}>
@@ -205,7 +191,7 @@ export default function SideBar(menuActive: MenuActive) {
                     </span>
                 </ul>
             </li>
-            <li className="nav-item" style={{cursor: 'pointer'}}>
+            <li className="nav-item" style={{ cursor: 'pointer' }}>
                 <ul className={projectExpand.menuType == MenuActiveType.ACTIVITY ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'} onClick={() => {
                     push('/activity')
                 }}>
@@ -217,7 +203,38 @@ export default function SideBar(menuActive: MenuActive) {
                         Activity
                     </span>
                 </ul>
-            </li>            
+            </li>
+            <li className="nav-item">
+                <div style={{ cursor: 'pointer' }}
+                    className={projectExpand.menuType == MenuActiveType.ADMIN ? 'nav-link expand text-truncate menu-active' : 'nav-link collapsed text-truncate'}
+                    data-toggle="collapse" data-target="#submenu1">
+                    <i className="fa fa-table"></i>
+                    <span onClick={onClickAdmin} className="d-none d-sm-inline">
+                        <span style={{ marginRight: '5px' }}><Image src={adminIcon.src} alt="project icon" width={20} height={20} /> </span>
+                        Admin
+                    </span>
+                </div>
+                <div className={projectExpand.menuType == MenuActiveType.ADMIN ? 'expand' : 'collapse'}
+                    id="submenu1"
+                    aria-expanded="true">
+                    <ul className="flex-column pl-2 nav">
+                        <li className={projectExpand.subMenuType == SubMenuActiveType.ADMIN_KPI ? 'nav-item menu-active' : 'nav-item'}>
+                            <span className="nav-link py-0"
+                                onClick={() => {
+                                    push('/admin')
+                                }}
+                                style={{ cursor: 'pointer' }}>
+                                KPI
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li style={{marginTop: '60px'}}>
+                <div>
+                    <small>© 2021 All Rights Reserved</small>
+                </div>
+            </li>
         </ul>
     </div>)
 }

@@ -1,9 +1,23 @@
 import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-// import { BarChart } from './BarChart';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
 
 const labels = ['ปี 2571', 'ปี 2570', 'ปี 2569', 'ปี 2568', 'ปี 2567'];
 
