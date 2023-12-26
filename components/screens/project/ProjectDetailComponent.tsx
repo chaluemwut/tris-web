@@ -20,10 +20,10 @@ import ProjectNameHeader from "./detail/ProjectNameHeader";
 
 export default function ProjectDetailComponent() {
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent title="โครงการ"/>
+        <HeaderContent title="โครงการ" />
         <div>
             <div className="row">
-                <ProjectNameHeader/>
+                <ProjectNameHeader />
                 <div>
                     <div className="card" style={{ marginLeft: '30px', marginRight: '30px', marginTop: '40px' }}>
                         <div style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px', marginBottom: '20px' }}>
@@ -240,7 +240,9 @@ export default function ProjectDetailComponent() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Table titleHeader={['ตัวชี้วัด', 'ค่าเป้าหมาย', 'ผลการดำเนินงาน', 'ร้อยละของผลการดำเนินงาน เทียบกับค่าเป้าหมาย', 'หมายเหตุ']} />
+                                    <Table titleHeader={['ตัวชี้วัด', 'ค่าเป้าหมาย', 'ผลการดำเนินงาน', 'ร้อยละของผลการดำเนินงาน เทียบกับค่าเป้าหมาย', 'หมายเหตุ']}
+                                        firstRowData={['ตัวชี้วัด 1', 'ตัวชี้วัด 2', 'ตัวชี้วัด 3', 'ตัวชี้วัด 4', 'ตัวชี้วัด 5', 'ตัวชี้วัด 6', 'ตัวชี้วัด 7', 'ตัวชี้วัด 8']}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -253,7 +255,12 @@ export default function ProjectDetailComponent() {
                             <MainEditHeader title="กิจกรรมสำคัญในโครงการ (Activities)" />
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '10px' }}>
-                            <Table titleHeader={['แผนดำเนินงาน', 'น้ำหนัก', 'ผลการดำเนินงาน', 'ร้อยละของผลการดำเนินงาน เทียบกับแผนการดำเนินงาน', 'หมายเหตุ', 'เอกสารที่เกี่ยวข้อง']} />
+                            <Table titleHeader={['แผนดำเนินงาน', 'น้ำหนัก', 'ผลการดำเนินงาน', 'ร้อยละของผลการดำเนินงาน เทียบกับแผนการดำเนินงาน', 'หมายเหตุ', 'เอกสารที่เกี่ยวข้อง']}
+                                firstRowData={['กิจกรรมที่ 1 #################',
+                                    'กิจกรรมที่ 2 #################',
+                                    'กิจกรรมที่ 3 #################'
+                                ]}
+                            />
                         </div>
                     </div>
                 </div>
@@ -264,7 +271,9 @@ export default function ProjectDetailComponent() {
                             <MainEditHeader title="ผลการเบิกจ่าย" />
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '10px' }}>
-                            <Table titleHeader={['วงเงินที่ได้รับการอนุมัติ', 'ผลการเบิกจ่าย', 'ร้อยละผลการเบิกจ่ายต่อ วงเงินที่ได้รับการอนุมัติ', 'หมายเหตุ']} />
+                            <Table titleHeader={['วงเงินที่ได้รับการอนุมัติ', 'ผลการเบิกจ่าย', 'ร้อยละผลการเบิกจ่ายต่อ วงเงินที่ได้รับการอนุมัติ', 'หมายเหตุ']}
+                                firstRowData={['000,000,000', '000,000,000', '000,000,000']}
+                            />
                         </div>
                     </div>
                 </div>
@@ -307,11 +316,9 @@ export default function ProjectDetailComponent() {
                         </div>
                         <div style={{ marginLeft: '20px' }}>
                             <ListContent data={[
-                                `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`,
-                                `Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. `,
-                                `Ut enim adminima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliqui.`
+                                `การดำเนินงานอาจจะล่าช้ากว่าแผนงานซึ่งอาจส่งผลกระทบต่อการแล้วเสร็จงานบางส่วนที่จําเป็นต้องประสานกับผู้รับจ้างงาน`,
+                                `เจ้าหน้าที่ที่เข้ารับการอบรมฯ ไม่ตรงตามคุณสมบัติที่กำหนด ทำให้การอบรมฯ ไม่มีประสิทธิภาพ`,
+                                `เจ้าหน้าที่แจ้งรายละเอียดของกิจกรรม/โครงการต่อคณะทำงานฯ ได้ไม่ครบถ้วนหรือไม่ถูกต้อง ทำให้การพิจารณากิจกรรม/โครงการเกิดความผิดพลาด และไม่ครอบคลุมในประเด็นที่สำคัญ`
                             ]} />
                         </div>
                     </div>
@@ -324,11 +331,9 @@ export default function ProjectDetailComponent() {
                         </div>
                         <div style={{ marginLeft: '20px' }}>
                             <ListContent data={[
-                                `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`,
-                                `Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. `,
-                                `Ut enim adminima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliqui.`
+                                `พัฒนาแนวทางการประมาณการจํานวนบุคลากร`,
+                                `ออกแบบรูปแบบกิจกรรมสําหรับการอบรมและการประเมินผล ทั้งคุณภาพหลักสูตรและความพึงพอใจของผู้เข้าร่วม`,
+                                `จัดทำประชาพิจารณ์ร่วมกับภาครัฐ เอกชนผู้เดินรถ และ ภาคการศึกษาเพื่อขอข้อเสนอแนะ`
                             ]} />
                         </div>
                     </div>
@@ -341,10 +346,10 @@ export default function ProjectDetailComponent() {
                         </div>
                         <div style={{ marginLeft: '20px' }}>
                             <ListContent data={[
-                                `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`,
-                                `Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. `
+                                `เพื่อศึกษาเทคโนโลยีพลังงานสะอาดในระบบราง และแนวทางความเป็นไปได้ของการใช้งานเทคโนโลยีพลังงานสะอาดในระบบรางของประเทศไทย`,
+                                `เพื่อมุ่งเน้นศึกษาความเป็นไปได้ทางเทคนิคและความคุ้มค่าทางเศรษฐศาสตร์ (Technical &
+                                    Economic Feasibility) ของการใช้เทคโนโลยีพลังงานสะอาดในระบบรางของประเทศไทย และสามารถนําไปใช้ในการกําหนดทิศทางเชิงนโยบายที่เหมาะสมสําหรับการส่งเสริมการใช้พลังงานสะอาดที่เหมาะสมร่วมทั้งแนวทางการวางโครงข่ายของระบบนิเวศของการใช้พลังงานสะอาดที่เหมาะสม
+                                    ให้เข้ากับการใช้งานระบบรางของประเทศไทยในอนาคต`
                             ]} />
                         </div>
                     </div>
@@ -358,12 +363,68 @@ export default function ProjectDetailComponent() {
                         <div className="row" style={{ marginBottom: '10px' }}>
                             <div className="col-6">
                                 <div style={{ marginLeft: '20px', marginRight: '20px' }}>
-                                    <CardName />
+                                    <div>
+                                        <div className="card">
+                                            <div style={{ marginLeft: '10px', marginBottom: '20px' }}>
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>ชื่อ - นามสกุล :นายสมบัติ นามสมมฒิ</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>ตำแหน่ง : รองศาสตราจารย์</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>หน่วยงาน : สทร.</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>ช่องทางการติดต่อ</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>เบอร์โทร : 099-4444444</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>อีเมล์ : rtrda@gmail.com</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-6">
                                 <div style={{ marginLeft: '20px', marginRight: '20px' }}>
-                                    <CardName />
+                                    <div>
+                                        <div className="card">
+                                            <div style={{ marginLeft: '10px', marginBottom: '20px' }}>
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>ชื่อ - นามสกุล : นางสาวปรางมณี ทดสอบ</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>ตำแหน่ง : นักวิเคราะห์นโยบายและแผน</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>หน่วยงาน : สทร.</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>ช่องทางการติดต่อ</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>เบอร์โทร : 099-4444444</span>
+                                                </div>
+                                                <hr className="horizontal-line" />
+                                                <div style={{ marginBlock: '5px' }}>
+                                                    <span>อีเมล์ : rtrda@gmail.com</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -390,7 +451,76 @@ export default function ProjectDetailComponent() {
                             </div>
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '20px' }}>
-                            <TwoColumnData rowNumber={2} />
+                            <div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>รายงานแผนปฏิบัติการทํางาน</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-2-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>รายงานสรุปผลการศึกษาจากการเก็บข้อมูลพื้นภาคสนามและการวิเคราะห์เบื้องต้น</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>การทดสอบใช้งานจริงในการขนส่งสินค้า สําหรับการขนส่งทางรางที่ผ่านการทดสอบตาม
+                                                        มาตรฐานสากล</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>รายงานสรุปผลการทดสอบคุณสมบัติของตู้ขนส่งสินค้าแบบควบคุมอุณหภูมิ</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div className="row" style={{ marginBlock: '10px' }}>
+                                    <div>
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <div><i className="bi bi-plus-circle-fill" style={{
+                                                fontSize: '25px',
+                                                color: '#E3E6F5'
+                                            }}></i></div>
+                                            <div className="btn" style={{ border: '1px dashed #CFD2E7', marginLeft: '5px' }}>
+                                                <span style={{ marginLeft: '40px', marginRight: '40px' }}>เพิ่มข้อมูล</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div style={{ marginTop: '20px' }}>
@@ -408,7 +538,75 @@ export default function ProjectDetailComponent() {
                             </div>
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '20px' }}>
-                            <TwoColumnData rowNumber={2} />
+                            <div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>ศูนย์กลางองค์ความรู้ด้านเทคโนโลยีระบบราง</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-2-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>เชื่อมโยงและยกระดับภาคอุตสาหกรรม</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>พัฒนาทรัพยากรมนุษย์ด้านระบบราง</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>องค์กรแห่งการเรียนรู้ และบริหารจัดการตามหลักธรรมาภิบาล</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div className="row" style={{ marginBlock: '10px' }}>
+                                    <div>
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <div><i className="bi bi-plus-circle-fill" style={{
+                                                fontSize: '25px',
+                                                color: '#E3E6F5'
+                                            }}></i></div>
+                                            <div className="btn" style={{ border: '1px dashed #CFD2E7', marginLeft: '5px' }}>
+                                                <span style={{ marginLeft: '40px', marginRight: '40px' }}>เพิ่มข้อมูล</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div style={{ marginTop: '20px' }}>
@@ -429,11 +627,194 @@ export default function ProjectDetailComponent() {
                             <div className="alert" style={{ backgroundColor: '#F3F3F3' }}>
                                 องค์ประกอบที่ 1 การประเมินประสิทธิภาพ ประสิทธิผลของการดําเนินงาน
                             </div>
-                            <TwoColumnData rowNumber={4} />
+                            <div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>ความสําเร็จของการจัดทํายุทธศาสตร์ด้านเทคโนโลยีระบบราง (ว1)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-2-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>จํานวนข้อเสนอเชิงนโยบายในการขับเคลื่อนการพัฒนาเทคโนโลยีและเศรษฐกิจ
+                                                        ระบบราง (ว1)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>จํานวนผลงานวิจัยตามความต้องการและเชื่อมโยงสู่ภาคอุตสาหกรรม</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>จํานวนคู่มือมาตรฐานวิธีการทดสอบด้านระบบราง (ว3)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-5-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>ความสําเร็จของงานด้านการตรวจวัด วิเคราะห์ และทดสอบ ให้คําปรึกษาด้านผลิตภัณฑ์
+                                                        และงานด้านระบบราง (ว3)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-6-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>จํานวนหลักสูตรที่พัฒนาจากองค์ความรู้และเทคโนโลยีระบบราง (ว4 และ ว5)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-7-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>ความสําเร็จของการจัดทําแพลตฟอร์ม Rail Academy ด้านพัฒนาบุคลากร
+                                                        ของภาคอุตสาหกรรม (ว5)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-8-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>ความสําเร็จของการจัดทําฐานข้อมูลเทคโนโลยีระบบรางที่ใช้อ้างอิงระดับประเทศ (ว6)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div className="row" style={{ marginBlock: '10px' }}>
+                                    <div>
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <div><i className="bi bi-plus-circle-fill" style={{
+                                                fontSize: '25px',
+                                                color: '#E3E6F5'
+                                            }}></i></div>
+                                            <div className="btn" style={{ border: '1px dashed #CFD2E7', marginLeft: '5px' }}>
+                                                <span style={{ marginLeft: '40px', marginRight: '40px' }}>เพิ่มข้อมูล</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="alert" style={{ backgroundColor: '#F3F3F3' }}>
                                 องค์ประกอบที่ 2 การประเมินศักยภาพขององค์การมหาชน
                             </div>
-                            <TwoColumnData rowNumber={2} />
+                            <div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>การพัฒนาองค์การสู่ดิจิทัล การปรับเปลี่ยนหน่วยงานไปสู่ความเป็นดิจิทัล 
+(Digital Transformation)</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-2-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>การประเมินสถานะของหน่วยงานภาครัฐในการเป็นระบบราชการ 4.0 (PMQA 4.0) 10</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div style={{ display: 'flex' }}>
+                                                <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
+                                                <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                                                    <option selected>การควบคุมดูแลกิจการของคณะกรรมการองค์การมหาชน</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr className="horizontal-line" style={{ marginTop: '10px' }} />
+                                    </div>
+                                </div>
+                                <div className="row" style={{ marginBlock: '10px' }}>
+                                    <div>
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <div><i className="bi bi-plus-circle-fill" style={{
+                                                fontSize: '25px',
+                                                color: '#E3E6F5'
+                                            }}></i></div>
+                                            <div className="btn" style={{ border: '1px dashed #CFD2E7', marginLeft: '5px' }}>
+                                                <span style={{ marginLeft: '40px', marginRight: '40px' }}>เพิ่มข้อมูล</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
