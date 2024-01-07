@@ -7,6 +7,13 @@ import g2 from '../../../public/static/images/g2.png'
 import g3 from '../../../public/static/images/g3.svg'
 import g4 from '../../../public/static/images/g4.svg'
 import dummyP5 from '../../../public/static/images/dummyP5.png'
+import dummyDashboard1 from '../../../public/static/images/dashboard/dummy_dashboard_1.png'
+import dummyDashboard2 from '../../../public/static/images/dashboard/dummy_dashboard_2.png'
+import supplyChainDashboard from '../../../public/static/images/dashboard/supply_chain_dashboard.png'
+import environmentralDashbaord from '../../../public/static/images/dashboard/environmentral_dashbaord.png'
+import socialDashboard from '../../../public/static/images/dashboard/social_dashboard.png'
+import financialDashboard from '../../../public/static/images/dashboard/financial_dashboard.png'
+import progressionDashboard from '../../../public/static/images/dashboard/progression_dashboard.png'
 import Image from "next/image"
 import { LineSeriesChart } from "../../chartjs/LineSeriesChart";
 import ProjectHiLight from "../../home/ProjectHiLight";
@@ -14,7 +21,7 @@ import { DonutChartJS } from "../../chartjs/DonutChart";
 
 export default function Dashboard() {
     return (<div style={{ marginBottom: '20px' }}>
-        <HeaderContent title="หน้าหลัก"/>
+        <HeaderContent title="หน้าหลัก" />
         <div style={{ textAlign: 'right', paddingRight: '40px', marginTop: '20px' }}>
             <select style={{ color: 'white', backgroundColor: '#5A6ACE', borderRadius: '5px', height: '35px' }}>
                 <option>ดูทั้งหมด</option>
@@ -278,6 +285,97 @@ export default function Dashboard() {
                             </div>
                         </div>)}
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="row" style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
+            <div>
+                <div className="card">
+                    <div style={{ marginLeft: '20px', marginTop: '20px', marginBottom: '20px' }}>
+                        <div>
+                            หน่วยงานที่ร่วมมือด้วย
+                        </div>
+                        <div>
+                            <small style={{ color: '#BDBDBD', fontSize: '10px' }}>
+                                Collaboration - Dashboard
+                            </small>
+                        </div>
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            marginTop: '10px',
+                            marginBottom: '10px'
+                        }}>
+                            <div>
+                                ภาพรวมความร่วมมือ (รวมทุกด้าน)
+                            </div>
+                            <div style={{ marginRight: '20px' }}>
+                                <select>
+                                    <option>เปิดโครงการ</option>
+                                    <option>อยู่ระหว่างดำเนินการ</option>
+                                    <option>ดำเนินการแล้วเสร็จ</option>
+                                </select>
+                                <select>
+                                    <option>เลือกปีดำเนินงาน</option>
+                                    <option>ปี 2567</option>
+                                    <option>ปี 2566</option>
+                                    <option>ปี 2565</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <img src={dummyDashboard1.src} width="100%" />
+                        </div>
+                        <div>
+                            <div style={{ marginTop: '20px', marginBottom: '20px' }}>
+                                ความร่วมมือ (แยกตามด้าน)
+                            </div>
+                        </div>
+                        <div>
+                            <img src={dummyDashboard2.src} width="100%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="row" style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
+            <div>
+                <div className="card">
+                    <img src={supplyChainDashboard.src}/>
+                </div>
+            </div>
+        </div>
+
+        <div className="row" style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
+            <div>
+                <div className="card">
+                    <img src={environmentralDashbaord.src}/>
+                </div>
+            </div>
+        </div>
+
+        <div className="row" style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
+            <div>
+                <div className="card">
+                    <img src={socialDashboard.src}/>
+                </div>
+            </div>
+        </div>
+
+        <div className="row" style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
+            <div>
+                <div className="card">
+                    <img src={financialDashboard.src}/>
+                </div>
+            </div>
+        </div>
+
+        <div className="row" style={{ marginLeft: '20px', marginRight: '20px', marginTop: '20px' }}>
+            <div>
+                <div className="card">
+                    <img src={progressionDashboard.src}/>
                 </div>
             </div>
         </div>
