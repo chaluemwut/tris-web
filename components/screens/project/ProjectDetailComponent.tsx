@@ -6,6 +6,9 @@ import dummyP3 from '../../../public/static/images/dummy_p3.png';
 import dummyP4 from '../../../public/static/images/dummy_p4.png';
 import map from '../../../public/static/images/map.png';
 import pointGrid from '../../../public/static/images/point_grid.png';
+import projectDetail from '../../../public/static/images/detail/project_detail_activity.png';
+import projectPayment from '../../../public/static/images/detail/project_detail_payment.png';
+import comment from '../../../public/static/images/detail/comment.png';
 import peopleCircle from '../../../public/static/images/people_circle_icon.svg';
 import Image from "next/image";
 import MainEditHeader from "../../ui/MainEditHeader";
@@ -35,19 +38,18 @@ export default function ProjectDetailComponent() {
                             </div>
                             <div>
                                 <p style={{ marginLeft: '10px', marginTop: '10px' }}>
-                                    สทร. มุ่งหวังให้เกิดการวางรากฐานการปฏิบัติงานและการบริหารจัดการที่เป็นระบบ เชื่อมโยงกันทั้งในระดับโครงการ/แผนงาน สู่องค์กรผ่านการบูรณาการข้อมูลการปฏิบัติงานด้วยระบบเทคโนโลยี สารสนเทศ ดังนั้น เพื่อให้การบริหารงานของ สทร. สอดคล้องกับยุทธศาสตรชาติที่มีการนําเทคโนโลยีดิจิทัลมาประยุกต์ใช้โดยให้มีการติดตามและมีการประเมินผลที่เป็นระบบอย่างต่อเนื่อง และส่งผลให้การบริหารงานเป็นไปด้วยความโปร่งใสและเป็นธรรมจึงมีแนวคิดในการจัดทําโครงการพัฒนา ระบบเทคโนโลยีสารสนเทศเพื่อการติดตามและรายงานผลการปฏิบัติงานของ สทร.
+                                    ด้วยประเทศไทยอยู่ในช่วงทศวรรษการพัฒนาระบบและโครงข่ายการขนส่งทางราง ทั้งในรูปแบบรถไฟฟ้าขนส่งมวลชนในเมือง (Metro) รถไฟทางไกล (Main Line) รถไฟฟ้าความเร็วสูง (High Speed Rail) ที่กระจายไปในภูมิภาค และเชื่อมโยงพื้นที่สําคัญทั้งในประเทศและต่างประเทศซึ่งนําไปสู่การอํานวยความสะดวกของประชาชนในการเดินทางและการเพิ่มขีดความสามารถในการแข่งขัน ของภาคเอกชนไทยจากการขนส่งที่สะดวก รวดเร็ว และปลอดภัย รวมถึงโอกาสการพัฒนาอุตสาหกรรมและเทคโนโลยีระบบรางภายในประเทศ
                                 </p>
                                 <div>
                                     <i className="bi bi-circle-fill" style={{ marginRight: '5px', fontSize: '10px' }}></i>
                                     วัตถุประสงค์โครงการ
                                 </div>
-                                <div>1) ออกแบบและพัฒนาระบบเทคโนโลยีสารสนเทศเพื่อการติดตามและรายงานผลการปฏิบัติงานของสถาบันวิจัยและพัฒนาเทคโนโลยีระบบราง (องคการมหาชน) ตามแนวทางห่วงโซ่การดําเนินงาน
-                                    (Result Chain) สําหรับการประเมินความคุมค่าเพื่อพัฒนาองคการมหาชน ใหสามารถติดตามโครงการในมิติต่าง ๆ และตัวชี้วัดที่กําหนด
+                                <div>1)   จัดทํายุทธศาสตร์ด้านเทคโนโลยีระบบรางของประเทศเสนอต่อคณะรัฐมนตรีเพื่อส่งเสริมและสนับสนุนการพัฒนาอุตสาหกรรมและเทคโนโลยีระบบรางของประเทศ โดยมีกระบวนการจัดทําอย่างมี
+                                    ส่วนร่วมกับผู้มีส่วนได้เสีย รวมถึงผ่านกระบวนการประชาพิจารณ์จากผู้มีส่วนได้ส่วนเสีย
                                 </div>
-                                <div>2) เพื่อพัฒนาระบบสารสนเทศที่สามารถติดตาม ประเมินและรายงานผลการดําเนินงาน/ความกาวหนาของโครงการวิจัยและพัฒนาฯ</div>
-                                <div>3) เพื่ออํานวยความสะดวกในการจัดทําแผนงานโครงการ การติดตามความก้าวหน้าโครงการการรายงานผลการดําเนินงาน การประเมินผลงานตามตัวชี้วัด แผนงานโครงการ ตามประเภทงานต่าง ๆ</div>
-                                <div>4) เพื่อให้กรรมการและผูบริหารสถาบันฯ สามารถติดตามความกาวหนาของแผนงาน/โครงการตามตัวชี้วัด</div>
-                                <div>5) จัดทําคู่มือการใช้งานระบบติดตามและรายงานผลการปฏิบัติงานที่พัฒนาขึ้น โดยระบุขั้นตอนและวิธีการใช้งานระบบ สําหรับผู้ใช้งานในส่วนต่าง ๆ รวมทั้งการดูแลระบบสําหรับผูดูแลระบบ</div>
+                                <div>
+                                    2) ศึกษาและติดตามสถานภาพอุตสาหกรรมและเทคโนโลยีระบบรางของประเทศ เพื่อใช้ประกอบการจัดทําและปรับปรุงยุทธศาสตร์ให้สอดคล้องกับบริบทการเปลี่ยนแปลงของประเทศและนานาชาติ
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -58,7 +60,41 @@ export default function ProjectDetailComponent() {
                         <div className="inner-detail-card-content">
                             <MainEditHeader title="ความสอดคล้อง และความเชื่อมโยง" />
 
-                            <AccordingContent title="วัตถุประสงค์การจัดตั้งองค์กร" />
+                            {/* <AccordingContent title="วัตถุประสงค์การจัดตั้งองค์กร" /> */}
+                            <TopicHeader title="วัตถุประสงค์การจัดตั้งองค์กร" />
+                            <div className="row">
+                                <div className="col-4" style={{ display: 'flex' }}>
+                                    <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px' }}></i>
+                                    <div className="card" style={{ border: '1px solid #F2F2F2' }}>
+                                        <div style={{ marginRight: '10px' }}>
+                                            วัตถุประสงค์การจัดตั้ง สทร. ข้อที่ 1
+                                            ยุทธศาสตร์ด้านเทคโนโลยีระบบราง
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-4">
+                                    <div>
+                                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <div><i className="bi bi-plus-circle-fill" style={{
+                                                fontSize: '25px',
+                                                color: '#E3E6F5'
+                                            }}></i></div>
+                                            <div className="btn" style={{ border: '1px dashed #CFD2E7', marginLeft: '5px' }}>
+                                                <select style={{ border: 'none', width: '250px' }}>
+                                                    <option>เพิ่มข้อมูล</option>
+                                                    <option>วัตถุประสงค์การจัดตั้ง สทร. ข้อที่ 1  ยุทธศาสตร์ด้านเทคโนโลยีระบบราง</option>
+                                                    <option>วัตถุประสงค์การจัดตั้ง สทร. ข้อที่ 2 วิจัยและพัฒนานวัตกรรม</option>
+                                                    <option>วัตถุประสงค์การจัดตั้ง สทร. ข้อที่ 3 ศุนย์กลางในการรับ แลกเปลี่ยน และถ่ายทอดเทคโนโลยีระบบราง</option>
+                                                    <option>วัตถุประสงค์การจัดตั้ง สทร. ข้อที่ 4  พัฒนาบุคลากรด้านระบบราง</option>
+                                                    <option>วัตถุประสงค์การจัดตั้ง สทร. ข้อที่ 5  พัฒนามาตรฐานและการทดสอบ</option>
+                                                    <option>วัตถุประสงค์การจัดตั้ง สทร. ข้อที่ 6  ฐานข้อมูลด้านเทคโนโลยีระบบราง</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr className="horizontal-line" />
 
                             <TopicHeader title="แผนระดับ 1" />
                             <p style={{ color: '#4F4F4F', marginLeft: '20px' }}>
@@ -70,14 +106,107 @@ export default function ProjectDetailComponent() {
                                 แผนแม่บทภายใต้ยุทธศาสตร์ชาติ (พ.ศ. 2561 - 2580) ประเด็น (07) โครงสร้างพื้นฐานระบบโลจิสติกส์ และดิจิทัลเป็นกลไกสําคัญในการขับเคลื่อนและพัฒนาโครงสร้าง พื้นฐานด้านคมนาคมและ ระบบโลจิสติก พลังงานและดิจิทัล เพื่อรองรับและสนับสนุนการสร้างขีดความสามารถในการพัฒนายกระดับขีดความสามารถด้านเศรษฐกิจและสังคม
                             </p>
 
-                            <AccordingContent title="ยุทธศาสตร์ สทร. 2566 - 2571" />
+                            <div>
+                                <TopicHeader title="วัตถุประสงค์การจัดตั้งองค์กร" />
+                                <div className="row">
+                                    <div className="col-4" style={{ display: 'flex' }}>
+                                        <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px' }}></i>
+                                        <div className="card" style={{ border: '1px solid #F2F2F2' }}>
+                                            <div style={{ marginRight: '10px' }}>
+                                                ศูนย์กลางองค์ความรู้ด้านเทคโนโลยีระบบราง
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-4" style={{ display: 'flex' }}>
+                                        <i className={`bi bi-2-circle-fill primary-color`} style={{ fontSize: '25px' }}></i>
+                                        <div className="card" style={{ border: '1px solid #F2F2F2' }}>
+                                            <div style={{ marginRight: '10px' }}>
+                                                เชื่อมโยงและยกระดับภาคอุตสาหกรรม
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-4" style={{ display: 'flex' }}>
+                                        <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px' }}></i>
+                                        <div className="card" style={{ border: '1px solid #F2F2F2' }}>
+                                            <div style={{ marginRight: '10px' }}>
+                                                พัฒนาทรัพยากรมนุษย์ด้านระบบราง
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row" style={{ marginTop: '20px' }}>
+                                    <div className="col-4" style={{ display: 'flex' }}>
+                                        <i className={`bi bi-3-circle-fill primary-color`} style={{ fontSize: '25px' }}></i>
+                                        <div className="card" style={{ border: '1px solid #F2F2F2' }}>
+                                            <div style={{ marginRight: '10px' }}>
+                                                พัฒนาทรัพยากรมนุษย์ด้านระบบราง
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-4">
+                                        <div>
+                                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                                <div><i className="bi bi-plus-circle-fill" style={{
+                                                    fontSize: '25px',
+                                                    color: '#E3E6F5'
+                                                }}></i></div>
+                                                <div className="btn" style={{ border: '1px dashed #CFD2E7', marginLeft: '5px' }}>
+                                                    <select style={{ border: 'none', width: '200px' }}>
+                                                        <option>เพิ่มข้อมูล</option>
+                                                        <option>ศูนย์กลางองค์ความรู้ด้านเทคโนโลยีระบบราง</option>
+                                                        <option>เชื่อมโยงและยกระดับภาคอุตสาหกรรม</option>
+                                                        <option>พัฒนาทรัพยากรมนุษย์ด้านระบบราง</option>
+                                                        <option>องค์กรแห่งการเรียนรู้ และบริหารจัดการตามหลักธรรมาภิบาล</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <AccordingContent title="แผนงานหลักที่เกี่ยวข้อง" />
+                            <div>
+                                <TopicHeader title="แผนงานหลักที่เกี่ยวข้อง" />
+                                <div className="row">
+                                    <div className="col-4" style={{ display: 'flex' }}>
+                                        <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px' }}></i>
+                                        <div className="card" style={{ border: '1px solid #F2F2F2' }}>
+                                            <div style={{ marginRight: '10px' }}>
+                                                แผนงาน 1 พัฒนายุทธศาสตร์และนโยบาย ด้านเทคโนโลยีระบบราง
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-4">
+                                        <div>
+                                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                                <div><i className="bi bi-plus-circle-fill" style={{
+                                                    fontSize: '25px',
+                                                    color: '#E3E6F5'
+                                                }}></i></div>
+                                                <div className="btn" style={{ border: '1px dashed #CFD2E7', marginLeft: '5px' }}>
+                                                    <select style={{ border: 'none', width: '200px' }}>
+                                                        <option>เพิ่มข้อมูล</option>
+                                                        <option>
+                                                            แผนงาน 1 พัฒนายุทธศาสตร์และนโยบายด้านเทคโนโลยีระบบราง
+                                                        </option>
+                                                        <option>แผนงาน 2 ส่งเสริมและพัฒนาเศรษฐกิจและอุตสาหกรรมระบบราง</option>
+                                                        <option>แผนงาน 3 วิจัยและพัฒนาเทคโนโลยีและนวัตกรรม</option>
+                                                        <option>แผนงาน 4 พัฒนากลไกการถ่ายทอดเทคโนโลยี</option>
+                                                        <option>แผนงาน 5 พัฒนาความรู้บุคลากรด้านระบบราง</option>
+                                                        <option>แผนงาน 6 พัฒนามาตรฐานและระบบทดสอบ</option>
+                                                        <option>แผนงาน 7 พัฒนาฐานข้อมูลและองค์ความรู้ระบบราง</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <TopicHeader title="นโยบายและข้อสั่งการเพิ่มเติม" />
                             <p style={{ color: '#4F4F4F', marginLeft: '20px' }}>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                การดําเนินงานร่วมกันที่เข้มแข็งของหน่วยงานภาคอุตสาหกรรม ภาคการศึกษา และภาครัฐในการพัฒนาอุตสาหกรรมและเทคโนโลยีระบบรางของประเทศ โดยมีทิศทางการดําเนินงานที่ชัดเจน มีกลไก และรูปแบบทํางานอย่างเป็นระบบ สามารถใช้ทรัพยากรได้มีประสิทธิภาพและประสิทธิผลและการเพิ่มขีดความสามารถในการแข่งขันทางด้านโลจิสติกส์ทางรางของประเทศ
                             </p>
 
                         </div>
@@ -89,10 +218,12 @@ export default function ProjectDetailComponent() {
                         <div className="inner-detail-card-content">
                             <MainEditHeader title="กลุ่มเป้าหมาย" />
                             <p className="inner-content-p">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                                sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                                consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim adminima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliqui.
+                                <div>
+                                    1. ภาคอุตสาหกรรมระบบรางตลอดห่วงโซ่คุณค่า อาทิ อุตสาหกรรมการผลิต อุตสาหกรรมก่อสร้างและติดตั้งระบบ ธุรกิจเดินรถ อุตสาหกรรมซ่อมบํารุงรักษา เป็นต้น
+                                </div>
+                                <div>
+                                    2. ภาคการศึกษา อาทิ สถาบันการศึกษาระดับอาชีวศึกษาและระดับอุดมศึกษา และสถาบันฝึกอบรม เป็นต้น
+                                </div>
                             </p>
                         </div>
                     </div>
@@ -135,7 +266,7 @@ export default function ProjectDetailComponent() {
                         <div className="inner-detail-card-content">
                             <MainEditHeader title="งบประมาณโครงการ" />
                             <div>
-                                <p style={{ marginLeft: '10px', color: '#4F4F4F' }}>250,000,000  THB</p>
+                                <p style={{ marginLeft: '10px', color: '#4F4F4F' }}>7,734,000  บาท</p>
                             </div>
                             <hr className="horizontal-line" />
                             <div>
@@ -214,10 +345,7 @@ export default function ProjectDetailComponent() {
                                     อื่น ๆ
                                 </span>
                                 <p style={{ marginLeft: '10px', color: '#4F4F4F' }}>
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim adminima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliqui.
+                                    โครงการบริหารจัดการโครงสร้างระบบราง เป็นการดําเนินงานและพัฒนาตามยุทธศาสตร์ชาติ  ซึ่งเป็นการวางแนวทางในการพัฒนาและดําเนินงานอย่างต่อเนื่องจึงมีการแบ่งระยะการดำเนินงานเป็น 2 ระยะ คือ ระยะต้นแบบนำร่อง และระยะการใช้งานจริง โดยการดำเนินในโครงการปัจจุบันเป็นการดำเนินงานในระยะต้นแบบนำร่อง
                                 </p>
                             </div>
                         </div>
@@ -240,9 +368,78 @@ export default function ProjectDetailComponent() {
                                     </div>
                                 </div>
                                 <div>
-                                    <Table titleHeader={['ตัวชี้วัด', 'ค่าเป้าหมาย', 'ผลการดำเนินงาน', 'ร้อยละของผลการดำเนินงาน เทียบกับค่าเป้าหมาย', 'หมายเหตุ']}
+                                    {/* <Table titleHeader={['ตัวชี้วัด', 'ค่าเป้าหมาย', 'ผลการดำเนินงาน', 'ร้อยละของผลการดำเนินงาน เทียบกับค่าเป้าหมาย', 'หมายเหตุ']}
                                         firstRowData={['ตัวชี้วัด 1', 'ตัวชี้วัด 2', 'ตัวชี้วัด 3', 'ตัวชี้วัด 4', 'ตัวชี้วัด 5', 'ตัวชี้วัด 6', 'ตัวชี้วัด 7', 'ตัวชี้วัด 8']}
-                                    />
+                                    /> */}
+                                    <div style={{ marginTop: '10px' }}>
+                                        <table className="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style={{ backgroundColor: '#E6E9F8' }}>ตัวชี้วัด</th>
+                                                    <th scope="col" style={{ backgroundColor: '#E6E9F8' }}>ค่าเป้าหมาย</th>
+                                                    <th scope="col" style={{ backgroundColor: '#E6E9F8' }}>ผลการดำเนินงาน</th>
+                                                    <th scope="col" style={{ backgroundColor: '#E6E9F8' }}>ร้อยละของผลการดำเนินงาน เทียบกับค่าเป้าหมาย</th>
+                                                    <th scope="col" style={{ backgroundColor: '#E6E9F8' }}>หมายเหตุ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            1. ร่างยุทธศาสตร์ด้านเทคโนโลยีระบบรางของประเทศ ที่กำหนดกรอบยุทธศาสตร์​ เป้าหมาย กลยุทธ์และรายละเอียด ของเทคโนโลยีที่มีความสำคัญ
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            30
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            อยู่ระหว่างดำเนินการ
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            0.00
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            &nbsp;
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            2. ร่างยุทธศาสตร์ด้านเทคโนโลยีระบบรางที่ผ่านการ Technical Hearing จากผู้มีส่วนได้ส่วนเสีย
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            70
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            อยู่ระหว่างดำเนินการ
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            0.00
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="card" style={{ border: '1px dashed #CFD2E7' }}>
+                                                            &nbsp;
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +448,8 @@ export default function ProjectDetailComponent() {
 
                 <div>
                     <div className="card detail-card-content">
-                        <div className="inner-detail-card-content">
+                        <img src={projectDetail.src} />
+                        {/* <div className="inner-detail-card-content">
                             <MainEditHeader title="กิจกรรมสำคัญในโครงการ (Activities)" />
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '10px' }}>
@@ -261,20 +459,21 @@ export default function ProjectDetailComponent() {
                                     'กิจกรรมที่ 3 #################'
                                 ]}
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
                 <div>
                     <div className="card detail-card-content">
-                        <div className="inner-detail-card-content">
+                        <img src={projectPayment.src} />
+                        {/* <div className="inner-detail-card-content">
                             <MainEditHeader title="ผลการเบิกจ่าย" />
                         </div>
                         <div style={{ marginLeft: '20px', marginRight: '10px' }}>
                             <Table titleHeader={['วงเงินที่ได้รับการอนุมัติ', 'ผลการเบิกจ่าย', 'ร้อยละผลการเบิกจ่ายต่อ วงเงินที่ได้รับการอนุมัติ', 'หมายเหตุ']}
                                 firstRowData={['000,000,000', '000,000,000', '000,000,000']}
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -763,8 +962,8 @@ export default function ProjectDetailComponent() {
                                             <div style={{ display: 'flex' }}>
                                                 <i className={`bi bi-1-circle-fill primary-color`} style={{ fontSize: '25px', marginRight: '5px' }}></i>
                                                 <select className="form-select form-select-sm" aria-label=".form-select-sm example">
-                                                    <option selected>การพัฒนาองค์การสู่ดิจิทัล การปรับเปลี่ยนหน่วยงานไปสู่ความเป็นดิจิทัล 
-(Digital Transformation)</option>
+                                                    <option selected>การพัฒนาองค์การสู่ดิจิทัล การปรับเปลี่ยนหน่วยงานไปสู่ความเป็นดิจิทัล
+                                                        (Digital Transformation)</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -850,7 +1049,8 @@ export default function ProjectDetailComponent() {
 
                 <div>
                     <div className="card detail-card-content">
-                        <div className="inner-detail-card-content">
+                        <img src={comment.src} width={'100%'}/>
+                        {/* <div className="inner-detail-card-content">
                             <div>
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                     <div>
@@ -867,10 +1067,8 @@ export default function ProjectDetailComponent() {
                                 </div>
                             </div>
                             <div>
-                                <img src={dummyP3.src} width={'100%'} />
-                                <img src={dummyP4.src} width={'100%'} />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
