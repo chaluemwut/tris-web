@@ -4,6 +4,7 @@ import { useCookies } from "react-cookie"
 import Dashboard from "../components/screens/dashboard/Dashboard"
 import SideBar, { SubMenuActiveType } from "../components/sidebar/SideBar"
 import { MenuActiveType } from '../components/sidebar/SideBar'
+import Dashboard2 from "../components/screens/dashboard/Dashboard2"
 
 export default function Home() {
     const [cookie, setCookie] = useCookies()
@@ -31,8 +32,8 @@ export default function Home() {
         <div className="container-fluid">
             <div className="row">
                 <SideBar menuType={MenuActiveType.DASHBOARD} subMenuType={SubMenuActiveType.NONE} />
-                <div className="col-10" style={{backgroundColor: '#EEEFF3'}}>
-                    <Dashboard />
+                <div className="col-10" style={{ backgroundColor: '#EEEFF3' }}>
+                    <Dashboard2 />
                 </div>
             </div>
         </div>

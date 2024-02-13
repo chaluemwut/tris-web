@@ -135,3 +135,10 @@ body {
   background-color: white !important;
   cursor: pointer;
 }
+
+.main-dropdownlist {
+  color: 'white' !important;
+  background-color: '#5A6ACE' !important;
+  border-radius: '5px' !important;
+  height: '35px' !important;
+}
